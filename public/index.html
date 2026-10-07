@@ -1,441 +1,414 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#0070f3">
-    <meta name="description" content="Frontend Developer Portfolio - Nguyen Minh Tri">
-    <link rel="stylesheet" href="build/tailwind.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="portfolio.png?v=2">
-    <title> My Portfolio | NGUYEN MINH TRI</title>
+    <title>Nguyen Minh Tri - Portfolio</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind Config -->
+    <script src="../tailwind.config.js"></script>
 </head>
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300 font-sans antialiased">
 
-<body class="font-sans text-gray-900 dark:text-white bg-white dark:bg-dark-background transition-colors duration-300">
-    <!-- Dark mode background gradients -->
-    <div class="fixed inset-0 -z-10 opacity-0 dark:opacity-100 transition-opacity duration-500 pointer-events-none">
-        <div class="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-secondary/10"></div>
-    </div>
-
-    <!-- Header -->
-    <header class="fixed w-full top-0 z-50 bg-white/95 dark:bg-dark-background/95 backdrop-blur-sm shadow-sm transition-all duration-300">
-        <div class="container mx-auto px-4">
-            <nav class="flex justify-between items-center py-4">
-                <ul class="hidden md:flex flex-1 justify-center space-x-8">
-                    <li>
-                        <a href="#about" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">About</a>
-                    </li>
-                    <li>
-                        <a href="#skills" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">Skills</a>
-                    </li>
-                    <li>
-                        <a href="#projects" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">Projects</a>
-                    </li>
-                    <li>
-                        <a href="#contact" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">Contact</a>
-                    </li>
-                </ul>
-                <div class="flex items-center space-x-4">
-                    <button id="themeToggle" class="">
-                        <i class="fa-solid fa-moon text-gray-600 dark:text-gray-400"></i>
-                    </button>
-                    <button class="md:hidden p-2" id="menuToggle">
-                        <div class="w-6 h-5 flex flex-col justify-between">
-                            <span class="w-full h-0.5 bg-gray-600 dark:bg-gray-400 transition-all"></span>
-                            <span class="w-full h-0.5 bg-gray-600 dark:bg-gray-400 transition-all"></span>
-                            <span class="w-full h-0.5 bg-gray-600 dark:bg-gray-400 transition-all"></span>
-                        </div>
+    <!-- Header / Navbar -->
+    <nav class="fixed w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-100 dark:border-gray-800 z-50 transition-colors duration-300">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-center h-20">
+                <div class="flex items-center space-x-6 md:space-x-10">
+                    <a href="#home" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white font-medium text-sm transition-all hover:-translate-y-0.5">Home</a>
+                    <a href="#skills" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white font-medium text-sm transition-all hover:-translate-y-0.5">Skills</a>
+                    <a href="#experience" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white font-medium text-sm transition-all hover:-translate-y-0.5">Experience</a>
+                    <a href="#projects" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white font-medium text-sm transition-all hover:-translate-y-0.5">Projects</a>
+                    <a href="#contact" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white font-medium text-sm transition-all hover:-translate-y-0.5">Contact</a>
+                    
+                    <!-- Theme Toggle Button -->
+                    <button id="theme-toggle" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none rounded-lg text-sm p-2 transition-all hover:scale-110 hover:rotate-12">
+                        <i id="theme-toggle-dark-icon" class="fa-solid fa-moon hidden text-lg"></i>
+                        <i id="theme-toggle-light-icon" class="fa-solid fa-sun hidden text-lg"></i>
                     </button>
                 </div>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Mobile -->
-    <div id="mobileMenu" class="fixed inset-0 bg-white dark:bg-dark-background z-50 transform translate-x-full transition-transform duration-300 md:hidden">
-        <div class="container mx-auto px-4 h-full flex flex-col">
-            <div class="flex justify-between items-center py-4">
-                <div class="flex items-center">
-                    <span class="text-primary text-2xl ml-1">●</span>
-                </div>
-                <button id="closeMenu" class="p-2">
-                    <i class="fa-solid fa-square-xmark text-gray-600 dark:text-gray-400 text-2xl"></i>
-                </button>
             </div>
-            <ul class="flex-1 flex flex-col justify-center items-center space-y-8">
-                <li>
-                    <a href="#features" class="text-2xl text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">Showcase</a>
-                </li>
-                <li>
-                    <a href="#about" class="text-2xl text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">About</a>
-                </li>
-                <li>
-                    <a href="#skills" class="text-2xl text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">Skills</a>
-                </li>
-                <li>
-                    <a href="#projects" class="text-2xl text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">Projects</a>
-                </li>
-                <li>
-                    <a href="#contact" class="text-2xl text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">Contact</a>
-                </li>
-            </ul>
         </div>
-    </div>
+    </nav>
 
-    <!-- Hero -->
-    <section id="home" class="min-h-screen flex items-center justify-center pt-16 pb-12 px-4">
-        <div class="max-w-4xl mx-auto text-center">
-            <div class="inline-flex items-center gap-2 px-3 py-1 mb-6 text-sm font-medium text-green-700 bg-green-100 rounded-full dark:bg-green-900/30 dark:text-green-400">
-                <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-                Available for developer roles
-            </div>
-
-            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-6 leading-tight">
-                Hi, I'm <span class="text-primary bg-clip-text">Nguyen Minh Tri</span>
-            </h1>
-
-            <p class="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-10 leading-relaxed">
-                An enthusiastic Fresh Graduate Software Engineer passionate about building clean, responsive web applications and eager to master modern web technologies.
-            </p>
-        </div>
-    </section>
-
-    <!-- About -->
-    <section id="about" class="py-24 translate-y-4 transition-all duration-500 opacity-0">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                <div>
-                    <h2 class="text-3xl md:text-4xl font-bold mb-6">About Me</h2>
-                    <p class="text-xl text-gray-600 dark:text-gray-400 mb-6">
-                        An upcoming Software Engineering graduate from HUFLIT, passionate about building modern web experiences.
+    <main class="pt-24 pb-16">
+        <!-- Hero Section -->
+        <section id="home" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+            <div class="flex flex-col-reverse md:flex-row items-center justify-between gap-12">
+                
+                <!-- Left Content -->
+                <div class="w-full md:w-3/5">
+                    
+                    
+                    <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6 transition-all hover:scale-[1.02] origin-left duration-300 cursor-default">
+                        Hello, I'm <br/>
+                        <span class="text-gray-900 dark:text-white">Nguyen Minh Tri</span>
+                    </h1>
+                    
+                    <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-4 transition-colors">
+                        Passionate Frontend & Full-Stack Developer building modern web experiences with <span class="font-semibold text-gray-900 dark:text-white">solid expertise</span>
                     </p>
-                    <p class="text-gray-600 dark:text-gray-400 mb-6">
-                        I have hands-on experience developing full-stack web applications using React, Node.js, and ASP.NET. I focus on creating responsive, performant websites and writing clean, maintainable code following industry best practices.
+                    
+                    <p class="text-gray-500 dark:text-gray-400 text-base md:text-lg mb-8 leading-relaxed max-w-2xl transition-colors">
+                        Specializing in React, Next.js, and modern web technologies, focused on writing clean code and building user-centric applications.
                     </p>
-                    <p class="text-gray-600 dark:text-gray-400 mb-8">
-                        As a proactive and self-motivated individual, I am constantly learning new technologies and striving to grow into a professional Web Developer.
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="#contact" class="px-8 py-3 bg-primary text-white rounded-lg shadow-lg hover:bg-blue-600 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-blue-300/30 dark:hover:shadow-blue-500/20 shadow-blue-200/20 dark:shadow-blue-700/10 text-center">
-                            Contact Me
+                    
+                    <div class="flex flex-wrap items-center gap-4 mb-10">
+                        <a href="#" class="px-6 py-3 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-lg font-medium hover:bg-gray-800 dark:hover:bg-gray-100 transition-all flex items-center gap-2 shadow-sm hover:shadow-lg hover:-translate-y-1">
+                            <i class="fa-solid fa-download"></i> Download Resume
+                        </a>
+                        <a href="#projects" class="px-6 py-3 bg-white dark:bg-gray-800 text-gray-900 dark:text-white border border-gray-200 dark:border-gray-700 rounded-lg font-medium hover:bg-gray-50 dark:hover:bg-gray-700 transition-all shadow-sm hover:shadow-md hover:-translate-y-1">
+                            View My Work
                         </a>
                     </div>
-                </div>
-                <div class="relative">
-                    <div class="w-72 h-72 mx-auto animate-morph bg-gradient-to-br from-primary via-secondary to-accent rounded-full relative overflow-hidden">
-                        <div class="absolute inset-0 bg-gradient-to-br from-primary/50 via-secondary/50 to-accent/50 rounded-full blur-2xl animate-morph">
+                    
+                    <div class="flex items-center gap-4 mb-12">
+                        <a href="https://github.com/minhtri12-dev" target="_blank" class="w-10 h-10 rounded-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:border-gray-400 dark:hover:border-gray-500 transition-all shadow-sm hover:shadow-md hover:scale-110 hover:-translate-y-1"><i class="fa-brands fa-github text-lg"></i></a>
+                        <a href="https://www.linkedin.com/in/minhtring12/" class="w-10 h-10 rounded-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:border-gray-400 dark:hover:border-gray-500 transition-all shadow-sm hover:shadow-md hover:scale-110 hover:-translate-y-1"><i class="fa-brands fa-linkedin-in text-lg"></i></a>
+                        <a href="mailto:minhtring12@email.com" class="w-10 h-10 rounded-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:border-gray-400 dark:hover:border-gray-500 transition-all shadow-sm hover:shadow-md hover:scale-110 hover:-translate-y-1"><i class="fa-solid fa-envelope text-lg"></i></a>
+                    </div>
+
+                    <div class="flex flex-wrap items-center gap-8 md:gap-16 cursor-default">
+                        <div class="transition-all hover:-translate-y-1 hover:scale-105">
+                            <h3 class="text-3xl font-bold text-gray-900 dark:text-white mb-1">10+</h3>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">Projects Built</p>
                         </div>
-                        <img src="../assets/avt.png" alt="Profile Photo" class="absolute inset-0 w-full h-full object-cover z-10">
+                        <div class="transition-all hover:-translate-y-1 hover:scale-105">
+                            <h3 class="text-3xl font-bold text-gray-900 dark:text-white mb-1">..</h3>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">...</p>
+                        </div>
+                        <div class="transition-all hover:-translate-y-1 hover:scale-105">
+                            <h3 class="text-3xl font-bold text-gray-900 dark:text-white mb-1">100%</h3>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Content (Image) -->
+                <div class="w-full md:w-2/5 flex justify-center relative">
+                    <div class="relative w-72 h-72 md:w-[400px] md:h-[400px] group">
+                        <!-- Image Container with Shadow -->
+                        <div class="w-full h-full rounded-full overflow-hidden shadow-2xl dark:shadow-gray-900/50 border-4 border-white dark:border-gray-800 bg-gray-200 dark:bg-gray-700 transition-all duration-500 group-hover:shadow-[0_20px_50px_rgba(0,0,0,0.15)] group-hover:scale-[1.02]">
+                            <img src="../assets/avt.png" alt="Nguyen Minh Tri" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        </div>
+                        
+                        <!-- Available for hire badge -->
+                        <div class="absolute bottom-4 -right-4 md:bottom-8 md:-right-8 bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 rounded-full py-2 px-4 flex items-center gap-2 shadow-lg z-10 transition-all duration-300 hover:scale-110 hover:-translate-y-2 cursor-pointer">
+                            <span class="w-3 h-3 rounded-full bg-green-500 animate-pulse"></span>
+                            <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Ready for Work</span>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Skills -->
-    <section id="skills" class="py-24 bg-gray-50 dark:bg-dark-background-secondary translate-y-4 transition-all duration-500 opacity-0">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">My Skills</h2>
-            <p class="text-xl text-gray-600 dark:text-gray-400 text-center mb-16">Technologies and tools I use </p>
+        <!-- Technical Skills Section -->
+        <section id="skills" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4 hover:scale-105 transition-transform inline-block">Technical Skills</h2>
+                <p class="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">
+                    Equipped with practical project experience and essential technical stacks, focusing on building clean, user-friendly, and responsive web applications.
+                </p>
+            </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-                <!-- Skill Card 1: HTML5 / CSS3 -->
-                <div class="bg-white dark:bg-dark-background p-8 rounded-lg shadow-lg">
-                    <div class="w-16 h-16 bg-orange-500/10 rounded-full flex items-center justify-center mb-6">
-                        <i class="fa-brands fa-html5 text-orange-500 text-3xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4">HTML5 / CSS3</h3>
-                    <div class="w-full h-2 bg-gray-200 dark:bg-dark-background rounded-full overflow-hidden">
-                        <div class="w-[95%] h-full bg-gradient-to-r from-primary to-secondary rounded-full"></div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Skill Card 1 -->
+                <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-sm border border-gray-100 dark:border-gray-700 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 cursor-default group">
+                    <h3 class="font-semibold text-gray-900 dark:text-white mb-4 flex items-center gap-2 group-hover:text-blue-500 transition-colors">
+                        <i class="fa-solid fa-code text-gray-400 group-hover:text-blue-500 transition-colors"></i> Frontend & Core Technologies
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium transition-all hover:bg-blue-100 hover:text-blue-700 dark:hover:bg-blue-900 dark:hover:text-blue-300 hover:scale-105">JavaScript (ES6+)</span>
+                        <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium transition-all hover:bg-blue-100 hover:text-blue-700 dark:hover:bg-blue-900 dark:hover:text-blue-300 hover:scale-105">TypeScript</span>
+                        <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium transition-all hover:bg-blue-100 hover:text-blue-700 dark:hover:bg-blue-900 dark:hover:text-blue-300 hover:scale-105">C#</span>
+                        <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium transition-all hover:bg-blue-100 hover:text-blue-700 dark:hover:bg-blue-900 dark:hover:text-blue-300 hover:scale-105">HTML5/CSS3</span>
                     </div>
                 </div>
 
-                <!-- Skill Card 2: JavaScript -->
-                <div class="bg-white dark:bg-dark-background p-8 rounded-lg shadow-lg">
-                    <div class="w-16 h-16 bg-yellow-500/10 rounded-full flex items-center justify-center mb-6">
-                        <i class="fa-brands fa-js text-yellow-500 text-3xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4">JavaScript</h3>
-                    <div class="w-full h-2 bg-gray-200 dark:bg-dark-background rounded-full overflow-hidden">
-                        <div class="w-[90%] h-full bg-gradient-to-r from-primary to-secondary rounded-full"></div>
-                    </div>
-                </div>
-
-                <!-- Skill Card 3: React -->
-                <div class="bg-white dark:bg-dark-background p-8 rounded-lg shadow-lg">
-                    <div class="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mb-6">
-                        <i class="fa-brands fa-react text-cyan-500 text-3xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4">React</h3>
-                    <div class="w-full h-2 bg-gray-200 dark:bg-dark-background rounded-full overflow-hidden">
-                        <div class="w-[50%] h-full bg-gradient-to-r from-primary to-secondary rounded-full"></div>
+                <!-- Skill Card 2 -->
+                <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-sm border border-gray-100 dark:border-gray-700 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 cursor-default group">
+                    <h3 class="font-semibold text-gray-900 dark:text-white mb-4 flex items-center gap-2 group-hover:text-purple-500 transition-colors">
+                        <i class="fa-solid fa-globe text-gray-400 group-hover:text-purple-500 transition-colors"></i> Backend & Databases
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium transition-all hover:bg-purple-100 hover:text-purple-700 dark:hover:bg-purple-900 dark:hover:text-purple-300 hover:scale-105">React</span>
+                        <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium transition-all hover:bg-purple-100 hover:text-purple-700 dark:hover:bg-purple-900 dark:hover:text-purple-300 hover:scale-105">Next.js</span>
+                        <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium transition-all hover:bg-purple-100 hover:text-purple-700 dark:hover:bg-purple-900 dark:hover:text-purple-300 hover:scale-105">Node.js</span>
+                        <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium transition-all hover:bg-purple-100 hover:text-purple-700 dark:hover:bg-purple-900 dark:hover:text-purple-300 hover:scale-105">ASP.NET Core</span>
+                        <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium transition-all hover:bg-purple-100 hover:text-purple-700 dark:hover:bg-purple-900 dark:hover:text-purple-300 hover:scale-105">Tailwind CSS</span>
                     </div>
                 </div>
 
-                <!-- Skill Card 4: Node.js -->
-                <div class="bg-white dark:bg-dark-background p-8 rounded-lg shadow-lg">
-                    <div class="w-16 h-16 bg-green-500/10 rounded-full flex items-center justify-center mb-6">
-                        <i class="fa-brands fa-node-js text-green-500 text-3xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4">Node.js</h3>
-                    <div class="w-full h-2 bg-gray-200 dark:bg-dark-background rounded-full overflow-hidden">
-                        <div class="w-[50%] h-full bg-gradient-to-r from-primary to-secondary rounded-full"></div>
-                    </div>
-                </div>
-
-                <!-- Skill Card 5: C# / ASP.NET -->
-                <div class="bg-white dark:bg-dark-background p-8 rounded-lg shadow-lg">
-                    <div class="w-16 h-16 bg-purple-500/10 rounded-full flex items-center justify-center mb-6">
-                        <i class="fa-solid fa-code text-purple-500 text-3xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4">C# / ASP.NET</h3>
-                    <div class="w-full h-2 bg-gray-200 dark:bg-dark-background rounded-full overflow-hidden">
-                        <div class="w-[85%] h-full bg-gradient-to-r from-primary to-secondary rounded-full"></div>
-                    </div>
-                </div>
-
-                <!-- Skill Card 6: SQL Server -->
-                <div class="bg-white dark:bg-dark-background p-8 rounded-lg shadow-lg">
-                    <div class="w-16 h-16 bg-blue-600/10 rounded-full flex items-center justify-center mb-6">
-                        <i class="fa-solid fa-database text-blue-600 text-3xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4">SQL Server</h3>
-                    <div class="w-full h-2 bg-gray-200 dark:bg-dark-background rounded-full overflow-hidden">
-                        <div class="w-[50%] h-full bg-gradient-to-r from-primary to-secondary rounded-full"></div>
+                <!-- Skill Card 3 -->
+                <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-sm border border-gray-100 dark:border-gray-700 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 cursor-default group">
+                    <h3 class="font-semibold text-gray-900 dark:text-white mb-4 flex items-center gap-2 group-hover:text-emerald-500 transition-colors">
+                        <i class="fa-solid fa-gear text-gray-400 group-hover:text-emerald-500 transition-colors"></i> Development Tools
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium transition-all hover:bg-emerald-100 hover:text-emerald-700 dark:hover:bg-emerald-900 dark:hover:text-emerald-300 hover:scale-105">SQL Server</span>
+                        <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium transition-all hover:bg-emerald-100 hover:text-emerald-700 dark:hover:bg-emerald-900 dark:hover:text-emerald-300 hover:scale-105">Git & GitHub</span>
+                        <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium transition-all hover:bg-emerald-100 hover:text-emerald-700 dark:hover:bg-emerald-900 dark:hover:text-emerald-300 hover:scale-105">RESTful API</span>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="py-24 translate-y-4 transition-all duration-500 opacity-0">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Featured Projects</h2>
-            <p class="text-xl text-gray-600 dark:text-gray-400 text-center mb-16">
-                Check out some of my recent work
-            </p>
+        <!-- Professional Experience Section -->
+        <section id="experience" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4 hover:scale-105 transition-transform inline-block">Professional Experience</h2>
+                <p class="text-gray-500 dark:text-gray-400">
+                    Academic projects and practical experiences building robust web applications.
+                </p>
+            </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
-                <!-- Project Card 1: EL PULGA: Digital Museum -->
-                <div class="bg-white dark:bg-dark-background rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex flex-col">
-                    <div class="h-48 relative shrink-0">
-                        <img src="../assets/goat.png" alt="Goat Gallery" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-black/20"></div>
-                    </div>
-                    <div class="p-6 flex-1 flex flex-col justify-between">
+            <div class="flex flex-col gap-6">
+                <!-- Exp Card 1 -->
+                <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-sm border border-gray-100 dark:border-gray-700 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 group cursor-default">
+                    <div class="flex flex-col md:flex-row justify-between md:items-start mb-4 gap-2 md:gap-0">
                         <div>
-                            <h3 class="text-xl font-bold mb-3">EL PULGA: Digital Museum</h3>
-                            <p class="text-gray-600 dark:text-gray-400 mb-4 min-h-[44px]">
-                                MODERN DIGITAL MUSEUM FEATURING STICKY SCROLL, PARALLAX & 3D ANIMATIONS.
-                            </p>
-                            <div class="flex flex-wrap gap-2 min-h-[64px] content-start">
-                                <span class="px-3 py-1 bg-gray-100 dark:bg-dark-background-secondary text-gray-600 dark:text-gray-400 rounded-full text-sm">Next.js</span>
-                                <span class="px-3 py-1 bg-gray-100 dark:bg-dark-background-secondary text-gray-600 dark:text-gray-400 rounded-full text-sm">Tailwind CSS</span>
-                                <span class="px-3 py-1 bg-gray-100 dark:bg-dark-background-secondary text-gray-600 dark:text-gray-400 rounded-full text-sm">TypeScript</span> 
-                                <span class="px-3 py-1 bg-gray-100 dark:bg-dark-background-secondary text-gray-600 dark:text-gray-400 rounded-full text-sm">Framer Motion</span>                       
-                            </div>
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white flex items-center gap-2 group-hover:text-blue-600 transition-colors">
+                                <i class="fa-solid fa-briefcase text-gray-400 group-hover:text-blue-500 transition-colors text-sm"></i> Full-Stack Developer (Academic & Personal Projects)
+                            </h3>
+                            <p class="text-gray-600 dark:text-gray-400 font-medium ml-6">Independent / FPT Aspirant</p>
                         </div>
-                        <div class="flex gap-4 pt-6 mt-6">
-                            <a href="https://github.com/minhtri12-dev/goat-gallery" target="_blank" rel="noopener noreferrer" class="flex items-center text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors">
-                                <i class="fa-brands fa-github mr-2"></i>
-                                Code
-                            </a>
-                            <a href="https://goat-gallery-mocha.vercel.app/" target="_blank" rel="noopener noreferrer" class="flex items-center text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors">
-                                <i class="fa-solid fa-arrow-up-right-from-square mr-2"></i>
-                                Demo
-                            </a>
+                        <div class="text-left md:text-right ml-6 md:ml-0">
+                            <p class="text-gray-500 dark:text-gray-400 text-sm flex items-center md:justify-end gap-2 group-hover:text-gray-700 dark:group-hover:text-gray-300 transition-colors"><i class="fa-regular fa-calendar"></i> 2024 - Present</p>
+                            <p class="text-gray-500 dark:text-gray-400 text-sm flex items-center md:justify-end gap-2 group-hover:text-gray-700 dark:group-hover:text-gray-300 transition-colors"><i class="fa-solid fa-location-dot"></i> Ho Chi Minh City</p>
                         </div>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        Designed and developed multiple full-stack web applications utilizing modern JavaScript frameworks (React, Next.js) and backend technologies. Focused on responsive design, state management, and seamless API integrations.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-300 rounded-full text-xs font-medium transition-all hover:border-gray-400 hover:shadow-sm">React</span>
+                        <span class="px-3 py-1 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-300 rounded-full text-xs font-medium transition-all hover:border-gray-400 hover:shadow-sm">Next.js</span>
+                        <span class="px-3 py-1 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-300 rounded-full text-xs font-medium transition-all hover:border-gray-400 hover:shadow-sm">TypeScript</span>
+                        <span class="px-3 py-1 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-300 rounded-full text-xs font-medium transition-all hover:border-gray-400 hover:shadow-sm">Tailwind CSS</span>
+                        <span class="px-3 py-1 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-300 rounded-full text-xs font-medium transition-all hover:border-gray-400 hover:shadow-sm">ASP.NET Core</span>
                     </div>
                 </div>
 
-                <!-- Project Card 2: WEATHER APP -->
-                <div class="bg-white dark:bg-dark-background rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex flex-col">
-                    <div class="h-48 relative shrink-0">
-                        <img src="../assets/weather.png" alt="Weather App" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-black/20"></div>
-                    </div>
-                    <div class="p-6 flex-1 flex flex-col justify-between">
+                <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-sm border border-gray-100 dark:border-gray-700 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 group cursor-default">
+                    <div class="flex flex-col md:flex-row justify-between md:items-start mb-4 gap-2 md:gap-0">
                         <div>
-                            <h3 class="text-xl font-bold mb-3">WEATHER APP</h3>
-                            <p class="text-gray-600 dark:text-gray-400 mb-4 min-h-[44px]">
-                                MODERN GLASSMORPHISM WEATHER FORECAST APP.
-                            </p>
-                            <div class="flex flex-wrap gap-2 min-h-[64px] content-start">
-                                <span class="px-3 py-1 bg-gray-100 dark:bg-dark-background-secondary text-gray-600 dark:text-gray-400 rounded-full text-sm">HTML5</span>
-                                <span class="px-3 py-1 bg-gray-100 dark:bg-dark-background-secondary text-gray-600 dark:text-gray-400 rounded-full text-sm">CSS3</span>
-                                <span class="px-3 py-1 bg-gray-100 dark:bg-dark-background-secondary text-gray-600 dark:text-gray-400 rounded-full text-sm">JavaScript</span>
-                                <span class="px-3 py-1 bg-gray-100 dark:bg-dark-background-secondary text-gray-600 dark:text-gray-400 rounded-full text-sm">OpenWeather API</span>
-                            </div>
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white flex items-center gap-2 group-hover:text-blue-600 transition-colors">
+                                <i class="fa-solid fa-briefcase text-gray-400 group-hover:text-blue-500 transition-colors text-sm"></i> Full-Stack Developer (Academic & Personal Projects)
+                            </h3>
+                            <p class="text-gray-600 dark:text-gray-400 font-medium ml-6">Independent / FPT Aspirant</p>
                         </div>
-                        <div class="flex gap-4 pt-6 mt-6">
-                            <a href="https://github.com/minhtri12-dev/Weather-App" target="_blank" rel="noopener noreferrer" class="flex items-center text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors">
-                                <i class="fa-brands fa-github mr-2"></i>
-                                Code
-                            </a>
-                            <a href="https://minhtri12-dev.github.io/Weather-App/" target="_blank" rel="noopener noreferrer" class="flex items-center text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors">
-                                <i class="fa-solid fa-arrow-up-right-from-square mr-2"></i>
-                                Demo
-                            </a>
+                        <div class="text-left md:text-right ml-6 md:ml-0">
+                            <p class="text-gray-500 dark:text-gray-400 text-sm flex items-center md:justify-end gap-2 group-hover:text-gray-700 dark:group-hover:text-gray-300 transition-colors"><i class="fa-regular fa-calendar"></i> 2024 - Present</p>
+                            <p class="text-gray-500 dark:text-gray-400 text-sm flex items-center md:justify-end gap-2 group-hover:text-gray-700 dark:group-hover:text-gray-300 transition-colors"><i class="fa-solid fa-location-dot"></i> Ho Chi Minh City</p>
                         </div>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        Designed and developed multiple full-stack web applications utilizing modern JavaScript frameworks (React, Next.js) and backend technologies. Focused on responsive design, state management, and seamless API integrations.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-300 rounded-full text-xs font-medium transition-all hover:border-gray-400 hover:shadow-sm">React</span>
+                        <span class="px-3 py-1 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-300 rounded-full text-xs font-medium transition-all hover:border-gray-400 hover:shadow-sm">Next.js</span>
+                        <span class="px-3 py-1 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-300 rounded-full text-xs font-medium transition-all hover:border-gray-400 hover:shadow-sm">TypeScript</span>
+                        <span class="px-3 py-1 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-300 rounded-full text-xs font-medium transition-all hover:border-gray-400 hover:shadow-sm">Tailwind CSS</span>
+                        <span class="px-3 py-1 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-300 rounded-full text-xs font-medium transition-all hover:border-gray-400 hover:shadow-sm">ASP.NET Core</span>
                     </div>
                 </div>
 
-                <!-- Project Card 3: MUSIC APP -->
-                <div class="bg-white dark:bg-dark-background rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex flex-col">
-                    <div class="h-48 relative shrink-0">
-                        <img src="../assets/music.png" alt="Music App" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-black/20"></div>
-                    </div>
-                    <div class="p-6 flex-1 flex flex-col justify-between">
+                <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-sm border border-gray-100 dark:border-gray-700 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 group cursor-default">
+                    <div class="flex flex-col md:flex-row justify-between md:items-start mb-4 gap-2 md:gap-0">
                         <div>
-                            <h3 class="text-xl font-bold mb-3">MUSIC APP</h3>
-                            <p class="text-gray-600 dark:text-gray-400 mb-4 min-h-[44px]">
-                                SIMPLE AND CLEAN WEB MUSIC PLAYER.
-                            </p>
-                            <div class="flex flex-wrap gap-2 min-h-[64px] content-start">
-                                <span class="px-3 py-1 bg-gray-100 dark:bg-dark-background-secondary text-gray-600 dark:text-gray-400 rounded-full text-sm">HTML5</span>
-                                <span class="px-3 py-1 bg-gray-100 dark:bg-dark-background-secondary text-gray-600 dark:text-gray-400 rounded-full text-sm">CSS3</span>
-                                <span class="px-3 py-1 bg-gray-100 dark:bg-dark-background-secondary text-gray-600 dark:text-gray-400 rounded-full text-sm">JavaScript</span>
-                            </div>
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white flex items-center gap-2 group-hover:text-blue-600 transition-colors">
+                                <i class="fa-solid fa-briefcase text-gray-400 group-hover:text-blue-500 transition-colors text-sm"></i> Full-Stack Developer (Academic & Personal Projects)
+                            </h3>
+                            <p class="text-gray-600 dark:text-gray-400 font-medium ml-6">Independent / FPT Aspirant</p>
                         </div>
-                        <div class="flex gap-4 pt-6 mt-6">
-                            <a href="https://github.com/minhtri12-dev/music-app" target="_blank" rel="noopener noreferrer" class="flex items-center text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors">
-                                <i class="fa-brands fa-github mr-2"></i>
-                                Code
-                            </a>
-                            <a href="https://minhtri12-dev.github.io/music-app/" target="_blank" rel="noopener noreferrer" class="flex items-center text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors">
-                                <i class="fa-solid fa-arrow-up-right-from-square mr-2"></i>
-                                Demo
-                            </a>
+                        <div class="text-left md:text-right ml-6 md:ml-0">
+                            <p class="text-gray-500 dark:text-gray-400 text-sm flex items-center md:justify-end gap-2 group-hover:text-gray-700 dark:group-hover:text-gray-300 transition-colors"><i class="fa-regular fa-calendar"></i> 2024 - Present</p>
+                            <p class="text-gray-500 dark:text-gray-400 text-sm flex items-center md:justify-end gap-2 group-hover:text-gray-700 dark:group-hover:text-gray-300 transition-colors"><i class="fa-solid fa-location-dot"></i> Ho Chi Minh City</p>
                         </div>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        Designed and developed multiple full-stack web applications utilizing modern JavaScript frameworks (React, Next.js) and backend technologies. Focused on responsive design, state management, and seamless API integrations.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-300 rounded-full text-xs font-medium transition-all hover:border-gray-400 hover:shadow-sm">React</span>
+                        <span class="px-3 py-1 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-300 rounded-full text-xs font-medium transition-all hover:border-gray-400 hover:shadow-sm">Next.js</span>
+                        <span class="px-3 py-1 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-300 rounded-full text-xs font-medium transition-all hover:border-gray-400 hover:shadow-sm">TypeScript</span>
+                        <span class="px-3 py-1 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-300 rounded-full text-xs font-medium transition-all hover:border-gray-400 hover:shadow-sm">Tailwind CSS</span>
+                        <span class="px-3 py-1 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-300 rounded-full text-xs font-medium transition-all hover:border-gray-400 hover:shadow-sm">ASP.NET Core</span>
                     </div>
                 </div>
+
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact -->
-    <section id="contact" class="py-24 translate-y-4 transition-all duration-500 opacity-0">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">For Work</h2>
-            <p class="text-xl text-gray-600 dark:text-gray-400 text-center mb-16">
-                Interested in working together? Let's connect
-            </p>
+        <!-- Featured Projects Section -->
+        <section id="projects" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4 hover:scale-105 transition-transform inline-block">Featured Projects</h2>
+                <p class="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">
+                    Check out some of my recent work designed with passion and technical precision.
+                </p>
+            </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
-                
-                <!-- Contact Info -->
-                <div class="lg:col-span-1 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-1 gap-6">
-                    <!-- Email -->
-                    <div class="bg-white dark:bg-dark-background p-6 rounded-lg shadow-lg text-center">
-                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fa-solid fa-envelope text-primary text-xl"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Email</h3>
-                        <p class="text-gray-600 dark:text-gray-400">minhtring12@gmail.com</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+                <!-- Project 1: EL PULGA -->
+                <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 overflow-hidden flex flex-col transition-all duration-300 hover:shadow-2xl hover:-translate-y-3 group">
+                    <div class="h-56 w-full bg-gray-200 dark:bg-gray-700 relative overflow-hidden">
+                        <img src="../assets/goat.png" alt="EL PULGA: Digital Museum" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     </div>
-
-                    <!-- Location -->
-                    <div class="bg-white dark:bg-dark-background p-6 rounded-lg shadow-lg text-center">
-                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fa-solid fa-map-location-dot text-primary text-xl"></i>
+                    <div class="p-6 flex-grow flex flex-col relative">
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3 group-hover:text-blue-600 transition-colors uppercase">EL PULGA: LEO MESSI DIGITAL MUSEUM</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-6 flex-grow">
+                            An immersive web experience celebrating the GOAT, engineered with advanced sticky scrolling, parallax effects, and fluid animations.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded text-xs font-medium">Next.js</span>
+                            <span class="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded text-xs font-medium">Tailwind CSS</span>
+                            <span class="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded text-xs font-medium">TypeScript</span>
+                            <span class="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded text-xs font-medium">Framer Motion</span>
                         </div>
-                        <h3 class="text-xl font-bold mb-2">Location</h3>
-                        <p class="text-gray-600 dark:text-gray-400">District 12, HCMC</p>
-                    </div>
-
-                    <!-- Social -->
-                    <div class="bg-white dark:bg-dark-background p-6 rounded-lg shadow-lg text-center">
-                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fa-solid fa-globe text-primary text-xl"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Social</h3>
-                        <div class="flex justify-center space-x-4">
-                            <!-- Facebook -->
-                            <a href="https://facebook.com/nmtrii13/" target="_blank" class="w-10 h-10 bg-gray-100 dark:bg-dark-background-secondary rounded-full flex items-center justify-center text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors">
-                                <i class="fa-brands fa-facebook-f"></i>
-                            </a>
-                            <!-- LinkedIn -->
-                            <a href="https://linkedin.com/in/minhtring12/" target="_blank" class="w-10 h-10 bg-gray-100 dark:bg-dark-background-secondary rounded-full flex items-center justify-center text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors">
-                                <i class="fa-brands fa-linkedin-in"></i>
-                            </a>
-                            <!-- Instagram -->
-                            <a href="https://instagram.com/minhtringggg/" target="_blank" class="w-10 h-10 bg-gray-100 dark:bg-dark-background-secondary rounded-full flex items-center justify-center text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors">
-                                <i class="fa-brands fa-instagram"></i>
-                            </a>
+                        <div class="flex items-center gap-3">
+                            <a href="https://github.com/minhtri12-dev/goat-gallery" target="_blank" class="px-4 py-2 border border-gray-200 dark:border-gray-600 rounded-lg text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-700 transition-all hover:-translate-y-1 hover:shadow-md flex items-center gap-2"><i class="fa-brands fa-github"></i> Code</a>
+                            <a href="https://goat-gallery-mocha.vercel.app/" target="_blank" class="px-4 py-2 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-lg text-sm font-medium hover:bg-gray-800 dark:hover:bg-gray-100 transition-all hover:-translate-y-1 hover:shadow-md flex items-center gap-2"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Contact Form -->
-                <div class="lg:col-span-2">
-                    <form id="contactForm" class="bg-white dark:bg-dark-background p-8 rounded-lg shadow-lg">
-                        <h3 class="text-2xl font-bold mb-6">Send Me a Message</h3>
-                        <div class="space-y-6">
-                            <div>
-                                <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Name</label>
-                                <input type="text" name="name" id="name" required class="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-dark-background-secondary text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-colors outline-none">
-                            </div>
-                            <div>
-                                <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Email</label>
-                                <input type="email" name="email" id="email" required class="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-dark-background-secondary text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-colors outline-none">
-                            </div>
-                            <div>
-                                <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Message</label>
-                                <textarea type="text" name="message" id="message" rows="5" required class="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-dark-background-secondary text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-colors outline-none"></textarea>
-                            </div>
-                            <button type="submit" class="w-full px-8 py-3 bg-primary text-white rounded-lg shadow-lg hover:bg-blue-600 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-blue-300/30 dark:hover:shadow-blue-500/20 shadow-blue-200/20 dark:shadow-blue-700/10">Send
-                                Message</button>
+                <!-- Project 2: WEATHER APP -->
+                <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 overflow-hidden flex flex-col transition-all duration-300 hover:shadow-2xl hover:-translate-y-3 group">
+                    <div class="h-56 w-full bg-gray-200 dark:bg-gray-700 relative overflow-hidden flex items-center justify-center">
+                        <img src="../assets/weather.png" alt="WEATHER APP" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col relative">
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3 group-hover:text-emerald-600 transition-colors uppercase">SKYCAST: GLASSMORPHISM WEATHER APP</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-6 flex-grow">
+                            Real-time weather forecast dashboard featuring dynamic API integration, location-based search, and a sleek glassmorphism UI.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded text-xs font-medium">HTML5</span>
+                            <span class="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded text-xs font-medium">CSS3</span>
+                            <span class="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded text-xs font-medium">JavaScript</span>
+                            <span class="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded text-xs font-medium">OpenWeather API</span>
                         </div>
-                    </form>
+                        <div class="flex items-center gap-3">
+                            <a href="https://github.com/minhtri12-dev/Weather-App" target="_blank" class="px-4 py-2 border border-gray-200 dark:border-gray-600 rounded-lg text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-700 transition-all hover:-translate-y-1 hover:shadow-md flex items-center gap-2"><i class="fa-brands fa-github"></i> Code</a>
+                            <a href="https://minhtri12-dev.github.io/Weather-App/" target="_blank" class="px-4 py-2 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-lg text-sm font-medium hover:bg-gray-800 dark:hover:bg-gray-100 transition-all hover:-translate-y-1 hover:shadow-md flex items-center gap-2"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: MUSIC APP -->
+                <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 overflow-hidden flex flex-col transition-all duration-300 hover:shadow-2xl hover:-translate-y-3 group">
+                    <div class="h-56 w-full bg-gray-200 dark:bg-gray-700 relative overflow-hidden">
+                        <img src="../assets/music.png" alt="MUSIC APP" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col relative">
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3 group-hover:text-purple-600 transition-colors uppercase">SONICWAVE: MODERN WEB MUSIC PLAYER</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-6 flex-grow">
+                            A feature-rich audio player built with Vanilla JavaScript, featuring custom audio controls, playlist management, and responsive design.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded text-xs font-medium">HTML5</span>
+                            <span class="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded text-xs font-medium">CSS3</span>
+                            <span class="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded text-xs font-medium">JavaScript</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <a href="https://github.com/minhtri12-dev/music-app" target="_blank" class="px-4 py-2 border border-gray-200 dark:border-gray-600 rounded-lg text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-700 transition-all hover:-translate-y-1 hover:shadow-md flex items-center gap-2"><i class="fa-brands fa-github"></i> Code</a>
+                            <a href="https://minhtri12-dev.github.io/music-app/" target="_blank" class="px-4 py-2 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-lg text-sm font-medium hover:bg-gray-800 dark:hover:bg-gray-100 transition-all hover:-translate-y-1 hover:shadow-md flex items-center gap-2"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: TRILOGY 2215 (Game phá án) -->
+                <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 overflow-hidden flex flex-col transition-all duration-300 hover:shadow-2xl hover:-translate-y-3 group">
+                    <div class="h-56 w-full bg-gray-200 dark:bg-gray-700 relative overflow-hidden flex items-center justify-center">
+                        <!-- Nếu bạn chưa có ảnh riêng cho game phá án, có thể dùng tạm ảnh demo hoặc ảnh khác trong assets -->
+                        <img src="../assets/demo.png" alt="TRILOGY 2215" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col relative">
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3 group-hover:text-red-600 transition-colors uppercase">TRILOGY 2215: DETECTIVE MYSTERY GAME</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-6 flex-grow">
+                            An immersive narrative-driven detective puzzle game featuring interactive choices, dynamic UI state management, and engaging investigation mechanics.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded text-xs font-medium">React / Next.js</span>
+                            <span class="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded text-xs font-medium">Tailwind CSS</span>
+                            <span class="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded text-xs font-medium">TypeScript</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <a href="https://github.com/minhtri12-dev/trilogy-2215" target="_blank" class="px-4 py-2 border border-gray-200 dark:border-gray-600 rounded-lg text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-700 transition-all hover:-translate-y-1 hover:shadow-md flex items-center gap-2"><i class="fa-brands fa-github"></i> Code</a>
+                            <a href="https://trilogy-2215.vercel.app/" target="_blank" class="px-4 py-2 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-lg text-sm font-medium hover:bg-gray-800 dark:hover:bg-gray-100 transition-all hover:-translate-y-1 hover:shadow-md flex items-center gap-2"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-50 dark:bg-dark-background-secondary py-12">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row justify-between items-center mb-8">
-                <ul class="flex flex-wrap justify-center gap-6 mb-0">
-                    <li>
-                        <a href="#about" class="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors">About</a>
-                    </li>
-                    <li>
-                        <a href="#skills" class="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors">Skills</a>
-                    </li>
-                    <li>
-                        <a href="#projects" class="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors">Projects</a>
-                    </li>
-                    <li>
-                        <a href="#contact" class="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors">Contact</a>
-                    </li>
-                </ul>
-                <div class="flex gap-4">
-                    <a href="https://facebook.com/nmtrii13/" target="_blank" class="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors">
-                        <i class="fa-brands fa-facebook-f"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/minhtring12/" target="_blank" class="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors">
-                        <i class="fa-brands fa-linkedin-in"></i>
-                    </a>
-                    <a href="https://instagram.com/minhtringggg/" target="_blank" class="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
+        <!-- Contact Section -->
+        <section id="contact" class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 mb-10">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4 hover:scale-105 transition-transform inline-block">Let's Work Together</h2>
+                <p class="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">
+                    Ready to bring your next project to life? Let's discuss how my expertise can help achieve your goals.
+                </p>
+            </div>
+
+            <div class="flex flex-col md:flex-row gap-8">
+                <!-- Left: Contact Info -->
+                <div class="w-full md:w-1/3 flex flex-col gap-4">
+                    <div class="bg-white dark:bg-gray-800 p-5 rounded-2xl border border-gray-100 dark:border-gray-700 shadow-sm flex items-center gap-4 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-gray-300 dark:hover:border-gray-500 cursor-pointer group">
+                        <i class="fa-regular fa-envelope text-gray-400 text-xl w-6 group-hover:text-blue-500 transition-colors group-hover:scale-110"></i>
+                        <div>
+                            <p class="text-sm font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 transition-colors">Email</p>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">minhtring12@email.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white dark:bg-gray-800 p-5 rounded-2xl border border-gray-100 dark:border-gray-700 shadow-sm flex items-center gap-4 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-gray-300 dark:hover:border-gray-500 cursor-pointer group">
+                        <i class="fa-solid fa-phone text-gray-400 text-xl w-6 group-hover:text-green-500 transition-colors group-hover:scale-110"></i>
+                        <div>
+                            <p class="text-sm font-semibold text-gray-900 dark:text-white group-hover:text-green-600 transition-colors">Phone</p>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">+84 383 223 862</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white dark:bg-gray-800 p-5 rounded-2xl border border-gray-100 dark:border-gray-700 shadow-sm flex items-center gap-4 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-gray-300 dark:hover:border-gray-500 cursor-pointer group">
+                        <i class="fa-solid fa-location-dot text-gray-400 text-xl w-6 group-hover:text-red-500 transition-colors group-hover:scale-110"></i>
+                        <div>
+                            <p class="text-sm font-semibold text-gray-900 dark:text-white group-hover:text-red-600 transition-colors">Location</p>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">Ho Chi Minh City</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Form -->
+                <div class="w-full md:w-2/3">
+                    <div class="bg-white dark:bg-gray-800 p-6 md:p-8 rounded-2xl border border-gray-100 dark:border-gray-700 shadow-sm transition-all duration-300 hover:shadow-xl">
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-6">Send a Message</h3>
+                        <form class="flex flex-col gap-4">
+                            <div class="flex flex-col md:flex-row gap-4">
+                                <input type="text" placeholder="Your Name" class="w-full bg-gray-50 dark:bg-gray-900 border border-transparent rounded-lg p-3 text-sm text-gray-900 dark:text-white focus:border-gray-300 dark:focus:border-gray-600 focus:ring-2 focus:ring-gray-200 dark:focus:ring-gray-700 outline-none transition-all hover:border-gray-200 dark:hover:border-gray-700">
+                                <input type="email" placeholder="Your Email" class="w-full bg-gray-50 dark:bg-gray-900 border border-transparent rounded-lg p-3 text-sm text-gray-900 dark:text-white focus:border-gray-300 dark:focus:border-gray-600 focus:ring-2 focus:ring-gray-200 dark:focus:ring-gray-700 outline-none transition-all hover:border-gray-200 dark:hover:border-gray-700">
+                            </div>
+                            <input type="text" placeholder="Subject" class="w-full bg-gray-50 dark:bg-gray-900 border border-transparent rounded-lg p-3 text-sm text-gray-900 dark:text-white focus:border-gray-300 dark:focus:border-gray-600 focus:ring-2 focus:ring-gray-200 dark:focus:ring-gray-700 outline-none transition-all hover:border-gray-200 dark:hover:border-gray-700">
+                            <textarea placeholder="Your Message" rows="4" class="w-full bg-gray-50 dark:bg-gray-900 border border-transparent rounded-lg p-3 text-sm text-gray-900 dark:text-white focus:border-gray-300 dark:focus:border-gray-600 focus:ring-2 focus:ring-gray-200 dark:focus:ring-gray-700 outline-none transition-all hover:border-gray-200 dark:hover:border-gray-700 resize-none"></textarea>
+                            <button type="button" class="w-full bg-gray-900 dark:bg-white text-white dark:text-gray-900 font-medium rounded-lg py-3 mt-2 hover:bg-gray-800 dark:hover:bg-gray-200 transition-all hover:-translate-y-1 hover:shadow-lg flex justify-center items-center gap-2 group">
+                                <i class="fa-regular fa-paper-plane group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i> Send Message
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
-            <div class="text-center text-gray-600 dark:text-gray-400 text-sm">
-                <p>&copy; 2026 My Portfolio. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+        </section>
+    </main>
 
+    <!-- Custom Script -->
     <script src="script.js"></script>
 </body>
-
 </html>
