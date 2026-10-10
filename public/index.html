@@ -20,17 +20,24 @@
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-center h-20">
                 <div class="flex items-center space-x-6 md:space-x-10">
-                    <a href="#home" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white font-medium text-sm transition-all hover:-translate-y-0.5">Home</a>
-                    <a href="#skills" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white font-medium text-sm transition-all hover:-translate-y-0.5">Skills</a>
-                    <a href="#experience" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white font-medium text-sm transition-all hover:-translate-y-0.5">Experience</a>
-                    <a href="#projects" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white font-medium text-sm transition-all hover:-translate-y-0.5">Projects</a>
-                    <a href="#contact" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white font-medium text-sm transition-all hover:-translate-y-0.5">Contact</a>
+                    <a href="#home" data-translate="nav_home" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white font-medium text-sm transition-all hover:-translate-y-0.5">Home</a>
+                    <a href="#skills" data-translate="nav_skills" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white font-medium text-sm transition-all hover:-translate-y-0.5">Skills</a>
+                    <a href="#experience" data-translate="nav_experience" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white font-medium text-sm transition-all hover:-translate-y-0.5">Experience</a>
+                    <a href="#projects" data-translate="nav_projects" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white font-medium text-sm transition-all hover:-translate-y-0.5">Projects</a>
+                    <a href="#contact" data-translate="nav_contact" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white font-medium text-sm transition-all hover:-translate-y-0.5">Contact</a>
                     
-                    <!-- Theme Toggle Button -->
-                    <button id="theme-toggle" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none rounded-lg text-sm p-2 transition-all hover:scale-110 hover:rotate-12">
-                        <i id="theme-toggle-dark-icon" class="fa-solid fa-moon hidden text-lg"></i>
-                        <i id="theme-toggle-light-icon" class="fa-solid fa-sun hidden text-lg"></i>
-                    </button>
+                    <div class="flex items-center space-x-2">
+                        <!-- Theme Toggle Button -->
+                        <button id="theme-toggle" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none rounded-lg text-sm p-2 transition-all hover:scale-110 hover:rotate-12">
+                            <i id="theme-toggle-dark-icon" class="fa-solid fa-moon hidden text-lg"></i>
+                            <i id="theme-toggle-light-icon" class="fa-solid fa-sun hidden text-lg"></i>
+                        </button>
+                        
+                        <!-- Language Toggle Button -->
+                        <button id="lang-toggle" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none rounded-lg text-sm p-2 font-bold transition-all hover:scale-110">
+                            <span id="lang-text">EN</span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -44,24 +51,24 @@
                 <!-- Left Content -->
                 <div class="w-full md:w-3/5">
                     
-                    <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6 transition-all hover:scale-[1.02] origin-left duration-300 cursor-default">
+                    <h1 data-translate="hero_hello" class="text-4xl md:text-6xl font-bold leading-tight mb-6 transition-all hover:scale-[1.02] origin-left duration-300 cursor-default">
                         Hello, I'm <br/>
                         <span class="text-gray-900 dark:text-white">Nguyen Minh Tri</span>
                     </h1>
                     
-                    <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-4 transition-colors">
+                    <p data-translate="hero_role" class="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-4 transition-colors">
                         Software Engineer | Fullstack Developer 
                     </p>
                     
-                    <p class="text-gray-500 dark:text-gray-400 text-base md:text-lg mb-8 leading-relaxed max-w-2xl transition-colors">
+                    <p data-translate="hero_desc" class="text-gray-500 dark:text-gray-400 text-base md:text-lg mb-8 leading-relaxed max-w-2xl transition-colors">
                         Passionate about building modern web applications. Familiar with React.js, Next.js, C#, ASP.NET MVC, Node.js, TypeScript, and SQL Server, with a strong foundation in RESTful APIs, Authentication and Authorization.
                     </p>
                     
                     <div class="flex flex-wrap items-center gap-4 mb-10">
-                        <a href="../assets/CV_NGUYENMINHTRI.pdf" class="px-6 py-3 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-lg font-medium hover:bg-gray-800 dark:hover:bg-gray-100 transition-all flex items-center gap-2 shadow-sm hover:shadow-lg hover:-translate-y-1">
+                        <a href="../assets/CV_NGUYENMINHTRI.pdf" data-translate="hero_download" class="px-6 py-3 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-lg font-medium hover:bg-gray-800 dark:hover:bg-gray-100 transition-all flex items-center gap-2 shadow-sm hover:shadow-lg hover:-translate-y-1">
                             <i class="fa-solid fa-download"></i> Download Resume
                         </a>
-                        <a href="#projects" class="px-6 py-3 bg-white dark:bg-gray-800 text-gray-900 dark:text-white border border-gray-200 dark:border-gray-700 rounded-lg font-medium hover:bg-gray-50 dark:hover:bg-gray-700 transition-all shadow-sm hover:shadow-md hover:-translate-y-1">
+                        <a href="#projects" data-translate="hero_view" class="px-6 py-3 bg-white dark:bg-gray-800 text-gray-900 dark:text-white border border-gray-200 dark:border-gray-700 rounded-lg font-medium hover:bg-gray-50 dark:hover:bg-gray-700 transition-all shadow-sm hover:shadow-md hover:-translate-y-1">
                             View My Work
                         </a>
                     </div>
@@ -75,15 +82,15 @@
                     <div class="flex flex-wrap items-center gap-8 md:gap-16 cursor-default">
                         <div class="transition-all hover:-translate-y-1 hover:scale-105">
                             <h3 class="text-3xl font-bold text-gray-900 dark:text-white mb-1">10+</h3>
-                            <p class="text-sm text-gray-500 dark:text-gray-400">Projects Built</p>
+                            <p data-translate="hero_stat_1" class="text-sm text-gray-500 dark:text-gray-400">Projects Built</p>
                         </div>
                         <div class="transition-all hover:-translate-y-1 hover:scale-105">
                             <h3 class="text-3xl font-bold text-gray-900 dark:text-white mb-1">6+</h3>
-                            <p class="text-sm text-gray-500 dark:text-gray-400">Core Technologies</p>
+                            <p data-translate="hero_stat_2" class="text-sm text-gray-500 dark:text-gray-400">Core Technologies</p>
                         </div>
                         <div class="transition-all hover:-translate-y-1 hover:scale-105">
                             <h3 class="text-3xl font-bold text-gray-900 dark:text-white mb-1">Full Stack</h3>
-                            <p class="text-sm text-gray-500 dark:text-gray-400">Development Focus</p>
+                            <p data-translate="hero_stat_3" class="text-sm text-gray-500 dark:text-gray-400">Development Focus</p>
                         </div>
                         
                     </div>
@@ -100,7 +107,7 @@
                         <!-- Available for hire badge -->
                         <div class="absolute bottom-4 -right-4 md:bottom-8 md:-right-8 bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 rounded-full py-2 px-4 flex items-center gap-2 shadow-lg z-10 transition-all duration-300 hover:scale-110 hover:-translate-y-2 cursor-pointer">
                             <span class="w-3 h-3 rounded-full bg-green-500 animate-pulse"></span>
-                            <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Ready for Work</span>
+                            <span data-translate="hero_ready" class="text-sm font-medium text-gray-700 dark:text-gray-300">Ready for Work</span>
                         </div>
                     </div>
                 </div>
@@ -112,7 +119,7 @@
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <!-- Section Header -->
             <div class="text-center mb-20">
-                <h2 class="text-3xl font-bold mb-4 text-gray-900 dark:text-white">SKILLS</h2>
+                <h2 data-translate="skills_title" class="text-3xl font-bold mb-4 text-gray-900 dark:text-white">SKILLS</h2>
             </div>
 
             <!-- Custom Ratio Grid Layout (7:5) -->
@@ -125,12 +132,12 @@
                         <div class="w-12 h-12 rounded-xl bg-gray-50 dark:bg-gray-800 border border-gray-100 dark:border-gray-700 flex items-center justify-center text-gray-700 dark:text-gray-300 shadow-sm">
                             <i class="fa-solid fa-laptop-code text-xl"></i>
                         </div>
-                        <h3 class="text-2xl font-semibold text-gray-900 dark:text-white">Technical Skills</h3>
+                        <h3 data-translate="skills_tech" class="text-2xl font-semibold text-gray-900 dark:text-white">Technical Skills</h3>
                     </div>
 
                     <!-- Inner Card 1 (Blue Theme) -->
                     <div class="bg-blue-50/50 dark:bg-blue-900/10 border border-blue-100 dark:border-blue-800/30 rounded-2xl p-6 h-full flex flex-col hover:-translate-y-1 hover:shadow-md transition-all duration-300">
-                        <h4 class="font-medium text-[15px] text-gray-900 dark:text-white mb-5 flex items-center gap-2.5">
+                        <h4 data-translate="skills_prog" class="font-medium text-[15px] text-gray-900 dark:text-white mb-5 flex items-center gap-2.5">
                             <i class="fa-regular fa-file-code text-gray-500 dark:text-gray-400"></i> Programming Languages
                         </h4>
                         <div class="flex flex-wrap gap-2.5 mt-auto">
@@ -143,7 +150,7 @@
 
                     <!-- Inner Card 2 (Emerald/Green Theme) -->
                     <div class="bg-emerald-50/50 dark:bg-emerald-900/10 border border-emerald-100 dark:border-emerald-800/30 rounded-2xl p-6 h-full flex flex-col hover:-translate-y-1 hover:shadow-md transition-all duration-300">
-                        <h4 class="font-medium text-[15px] text-gray-900 dark:text-white mb-5 flex items-center gap-2.5">
+                        <h4 data-translate="skills_front" class="font-medium text-[15px] text-gray-900 dark:text-white mb-5 flex items-center gap-2.5">
                             <i class="fa-solid fa-server text-gray-500 dark:text-gray-400"></i> Frontend Development
                         </h4>
                         <div class="flex flex-wrap gap-2.5 mt-auto">
@@ -157,7 +164,7 @@
 
                     <!-- Inner Card 3 (Purple Theme) -->
                     <div class="bg-purple-50/50 dark:bg-purple-900/10 border border-purple-100 dark:border-purple-800/30 rounded-2xl p-6 h-full flex flex-col hover:-translate-y-1 hover:shadow-md transition-all duration-300">
-                        <h4 class="font-medium text-[15px] text-gray-900 dark:text-white mb-5 flex items-center gap-2.5">
+                        <h4 data-translate="skills_back" class="font-medium text-[15px] text-gray-900 dark:text-white mb-5 flex items-center gap-2.5">
                             <i class="fa-solid fa-database text-gray-500 dark:text-gray-400"></i> Backend & APIs
                         </h4>
                         <div class="flex flex-wrap gap-2.5 mt-auto">
@@ -170,7 +177,7 @@
 
                     <!-- Inner Card 4 (yellow Theme) -->
                     <div class="bg-yellow-50/50 dark:bg-purple-900/10 border border-purple-100 dark:border-purple-800/30 rounded-2xl p-6 h-full flex flex-col hover:-translate-y-1 hover:shadow-md transition-all duration-300">
-                        <h4 class="font-medium text-[15px] text-gray-900 dark:text-white mb-5 flex items-center gap-2.5">
+                        <h4 data-translate="skills_db" class="font-medium text-[15px] text-gray-900 dark:text-white mb-5 flex items-center gap-2.5">
                             <i class="fa-solid fa-database text-gray-500 dark:text-gray-400"></i> Database & Developer Tools
                         </h4>
                         <div class="flex flex-wrap gap-2.5 mt-auto">
@@ -189,50 +196,50 @@
                         <div class="w-12 h-12 rounded-xl bg-gray-50 dark:bg-gray-800 border border-gray-100 dark:border-gray-700 flex items-center justify-center text-gray-700 dark:text-gray-300 shadow-sm">
                             <i class="fa-solid fa-users text-xl"></i>
                         </div>
-                        <h3 class="text-2xl font-semibold text-gray-900 dark:text-white">Soft Skills</h3>
+                        <h3 data-translate="skills_soft_title" class="text-2xl font-semibold text-gray-900 dark:text-white">Soft Skills</h3>
                     </div>
 
                     
                     <div class="bg-orange-50/50 dark:bg-orange-900/10 border border-orange-100 dark:border-orange-800/30 rounded-2xl p-6 h-full flex flex-col hover:-translate-y-1 hover:shadow-md transition-all duration-300">
-                        <h4 class="font-medium text-[15px] text-gray-900 dark:text-white mb-5 flex items-center gap-2.5">
+                        <h4 data-translate="skills_soft_1" class="font-medium text-[15px] text-gray-900 dark:text-white mb-5 flex items-center gap-2.5">
                             <i class="fa-regular fa-comments text-gray-500 dark:text-gray-400"></i> Communication & Collaboration
                         </h4>
                         <div class="flex flex-wrap gap-2.5 mt-auto">
-                            <span class="px-3.5 py-1.5 bg-white dark:bg-gray-800 border border-gray-200/60 dark:border-gray-700 text-gray-700 dark:text-gray-300 rounded-lg text-[13px] font-medium hover:scale-105 hover:shadow-sm transition-transform cursor-default">Teamwork</span>
-                            <span class="px-3.5 py-1.5 bg-white dark:bg-gray-800 border border-gray-200/60 dark:border-gray-700 text-gray-700 dark:text-gray-300 rounded-lg text-[13px] font-medium hover:scale-105 hover:shadow-sm transition-transform cursor-default">Knowledge Sharing</span>
-                            <span class="px-3.5 py-1.5 bg-white dark:bg-gray-800 border border-gray-200/60 dark:border-gray-700 text-gray-700 dark:text-gray-300 rounded-lg text-[13px] font-medium hover:scale-105 hover:shadow-sm transition-transform cursor-default">Active Listening</span>
+                            <span data-translate="skills_soft_1_1" class="px-3.5 py-1.5 bg-white dark:bg-gray-800 border border-gray-200/60 dark:border-gray-700 text-gray-700 dark:text-gray-300 rounded-lg text-[13px] font-medium hover:scale-105 hover:shadow-sm transition-transform cursor-default">Teamwork</span>
+                            <span data-translate="skills_soft_1_2" class="px-3.5 py-1.5 bg-white dark:bg-gray-800 border border-gray-200/60 dark:border-gray-700 text-gray-700 dark:text-gray-300 rounded-lg text-[13px] font-medium hover:scale-105 hover:shadow-sm transition-transform cursor-default">Knowledge Sharing</span>
+                            <span data-translate="skills_soft_1_3" class="px-3.5 py-1.5 bg-white dark:bg-gray-800 border border-gray-200/60 dark:border-gray-700 text-gray-700 dark:text-gray-300 rounded-lg text-[13px] font-medium hover:scale-105 hover:shadow-sm transition-transform cursor-default">Active Listening</span>
                         </div>
                     </div>
 
                     <div class="bg-rose-50/50 dark:bg-rose-900/10 border border-rose-100 dark:border-rose-800/30 rounded-2xl p-6 h-full flex flex-col hover:-translate-y-1 hover:shadow-md transition-all duration-300">
-                        <h4 class="font-medium text-[15px] text-gray-900 dark:text-white mb-5 flex items-center gap-2.5">
+                        <h4 data-translate="skills_soft_2" class="font-medium text-[15px] text-gray-900 dark:text-white mb-5 flex items-center gap-2.5">
                             <i class="fa-regular fa-handshake text-gray-500 dark:text-gray-400"></i> Teamwork & Adaptability
                         </h4>
                         <div class="flex flex-wrap gap-2.5 mt-auto">
-                            <span class="px-3.5 py-1.5 bg-white dark:bg-gray-800 border border-gray-200/60 dark:border-gray-700 text-gray-700 dark:text-gray-300 rounded-lg text-[13px] font-medium hover:scale-105 hover:shadow-sm transition-transform cursor-default">Team Collaboration</span>
-                            <span class="px-3.5 py-1.5 bg-white dark:bg-gray-800 border border-gray-200/60 dark:border-gray-700 text-gray-700 dark:text-gray-300 rounded-lg text-[13px] font-medium hover:scale-105 hover:shadow-sm transition-transform cursor-default">Adaptability</span>
-                            <span class="px-3.5 py-1.5 bg-white dark:bg-gray-800 border border-gray-200/60 dark:border-gray-700 text-gray-700 dark:text-gray-300 rounded-lg text-[13px] font-medium hover:scale-105 hover:shadow-sm transition-transform cursor-default">Responsibility</span>
+                            <span data-translate="skills_soft_2_1" class="px-3.5 py-1.5 bg-white dark:bg-gray-800 border border-gray-200/60 dark:border-gray-700 text-gray-700 dark:text-gray-300 rounded-lg text-[13px] font-medium hover:scale-105 hover:shadow-sm transition-transform cursor-default">Team Collaboration</span>
+                            <span data-translate="skills_soft_2_2" class="px-3.5 py-1.5 bg-white dark:bg-gray-800 border border-gray-200/60 dark:border-gray-700 text-gray-700 dark:text-gray-300 rounded-lg text-[13px] font-medium hover:scale-105 hover:shadow-sm transition-transform cursor-default">Adaptability</span>
+                            <span data-translate="skills_soft_2_3" class="px-3.5 py-1.5 bg-white dark:bg-gray-800 border border-gray-200/60 dark:border-gray-700 text-gray-700 dark:text-gray-300 rounded-lg text-[13px] font-medium hover:scale-105 hover:shadow-sm transition-transform cursor-default">Responsibility</span>
                         </div>
                     </div>
 
                     <div class="bg-teal-50/50 dark:bg-teal-900/10 border border-teal-100 dark:border-teal-800/30 rounded-2xl p-6 h-full flex flex-col hover:-translate-y-1 hover:shadow-md transition-all duration-300">
-                        <h4 class="font-medium text-[15px] text-gray-900 dark:text-white mb-5 flex items-center gap-2.5">
+                        <h4 data-translate="skills_soft_3" class="font-medium text-[15px] text-gray-900 dark:text-white mb-5 flex items-center gap-2.5">
                             <i class="fa-regular fa-lightbulb text-gray-500 dark:text-gray-400"></i> Problem Solving & Growth
                         </h4>
                         <div class="flex flex-wrap gap-2.5 mt-auto">
-                            <span class="px-3.5 py-1.5 bg-white dark:bg-gray-800 border border-gray-200/60 dark:border-gray-700 text-gray-700 dark:text-gray-300 rounded-lg text-[13px] font-medium hover:scale-105 hover:shadow-sm transition-transform cursor-default">Logical Thinking</span>
-                            <span class="px-3.5 py-1.5 bg-white dark:bg-gray-800 border border-gray-200/60 dark:border-gray-700 text-gray-700 dark:text-gray-300 rounded-lg text-[13px] font-medium hover:scale-105 hover:shadow-sm transition-transform cursor-default">Time Management</span>
-                            <span class="px-3.5 py-1.5 bg-white dark:bg-gray-800 border border-gray-200/60 dark:border-gray-700 text-gray-700 dark:text-gray-300 rounded-lg text-[13px] font-medium hover:scale-105 hover:shadow-sm transition-transform cursor-default">Self-Learning</span>
+                            <span data-translate="skills_soft_3_1" class="px-3.5 py-1.5 bg-white dark:bg-gray-800 border border-gray-200/60 dark:border-gray-700 text-gray-700 dark:text-gray-300 rounded-lg text-[13px] font-medium hover:scale-105 hover:shadow-sm transition-transform cursor-default">Logical Thinking</span>
+                            <span data-translate="skills_soft_3_2" class="px-3.5 py-1.5 bg-white dark:bg-gray-800 border border-gray-200/60 dark:border-gray-700 text-gray-700 dark:text-gray-300 rounded-lg text-[13px] font-medium hover:scale-105 hover:shadow-sm transition-transform cursor-default">Time Management</span>
+                            <span data-translate="skills_soft_3_3" class="px-3.5 py-1.5 bg-white dark:bg-gray-800 border border-gray-200/60 dark:border-gray-700 text-gray-700 dark:text-gray-300 rounded-lg text-[13px] font-medium hover:scale-105 hover:shadow-sm transition-transform cursor-default">Self-Learning</span>
                         </div>
                     </div>
 
                      <div class="bg-peach-50/50 dark:bg-peach-900/10 border border-peach-100 dark:border-teal-800/30 rounded-2xl p-6 h-full flex flex-col hover:-translate-y-1 hover:shadow-md transition-all duration-300">
-                        <h4 class="font-medium text-[15px] text-gray-900 dark:text-white mb-5 flex items-center gap-2.5">
+                        <h4 data-translate="skills_lang" class="font-medium text-[15px] text-gray-900 dark:text-white mb-5 flex items-center gap-2.5">
                             <i class="fa-regular fa-lightbulb text-gray-500 dark:text-gray-400"></i> Languages
                         </h4>
                         <div class="flex flex-wrap gap-2.5 mt-auto">
-                            <span class="px-3.5 py-1.5 bg-white dark:bg-gray-800 border border-gray-200/60 dark:border-gray-700 text-gray-700 dark:text-gray-300 rounded-lg text-[13px] font-medium hover:scale-105 hover:shadow-sm transition-transform cursor-default">Vietnamese - Native</span>
-                            <span class="px-3.5 py-1.5 bg-white dark:bg-gray-800 border border-gray-200/60 dark:border-gray-700 text-gray-700 dark:text-gray-300 rounded-lg text-[13px] font-medium hover:scale-105 hover:shadow-sm transition-transform cursor-default">English - TOEIC 550</span>
+                            <span data-translate="skills_lang_1" class="px-3.5 py-1.5 bg-white dark:bg-gray-800 border border-gray-200/60 dark:border-gray-700 text-gray-700 dark:text-gray-300 rounded-lg text-[13px] font-medium hover:scale-105 hover:shadow-sm transition-transform cursor-default">Vietnamese - Native</span>
+                            <span data-translate="skills_lang_2" class="px-3.5 py-1.5 bg-white dark:bg-gray-800 border border-gray-200/60 dark:border-gray-700 text-gray-700 dark:text-gray-300 rounded-lg text-[13px] font-medium hover:scale-105 hover:shadow-sm transition-transform cursor-default">English - TOEIC 550</span>
                         </div>
                     </div>
 
@@ -242,14 +249,10 @@
         </div>
     </section>
 
-            </div>
-        </div>
-    </section>
-
         <!-- Professional Experience Section -->
         <section id="experience" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4 hover:scale-105 transition-transform inline-block">PROJECTS EXPERIENCE</h2>
+                <h2 data-translate="exp_title" class="text-3xl font-bold text-gray-900 dark:text-white mb-4 hover:scale-105 transition-transform inline-block">PROJECTS EXPERIENCE</h2>
                 
             </div>
 
@@ -258,15 +261,15 @@
                 <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-sm border border-gray-100 dark:border-gray-700 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 group cursor-default">
                     <div class="flex flex-col md:flex-row justify-between md:items-start mb-4 gap-2 md:gap-0">
                         <div>
-                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white flex items-center gap-2 group-hover:text-blue-600 transition-colors">
+                            <h3 data-translate="exp_1_title" class="text-lg font-semibold text-gray-900 dark:text-white flex items-center gap-2 group-hover:text-blue-600 transition-colors">
                                 <i class="fa-solid fa-briefcase text-gray-400 group-hover:text-blue-500 transition-colors text-sm"></i> Shoes E-Commerce Website
                             </h3>
-                            <p class="text-gray-600 dark:text-gray-400 font-medium ml-6">Full Stack Developer | Team Project · 6 Members · 8 Weeks</p>
+                            <p data-translate="exp_1_sub" class="text-gray-600 dark:text-gray-400 font-medium ml-6">Full Stack Developer | Team Project · 6 Members · 8 Weeks</p>
                         </div>
                         <div class="text-left md:text-right ml-6 md:ml-0">
                         </div>
                     </div>
-                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                    <p data-translate="exp_1_desc" class="text-gray-600 dark:text-gray-300 mb-6">
                        Developed a full-stack e-commerce website with user authentication, role-based access control, product management, search and filtering, shopping cart, and order processing. Designed a relational database using SQL Server and collaborated with team members through Git/GitHub.
                     </p>
                     <div class="flex flex-wrap gap-2">
@@ -282,15 +285,15 @@
                 <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-sm border border-gray-100 dark:border-gray-700 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 group cursor-default">
                     <div class="flex flex-col md:flex-row justify-between md:items-start mb-4 gap-2 md:gap-0">
                         <div>
-                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white flex items-center gap-2 group-hover:text-blue-600 transition-colors">
+                            <h3 data-translate="exp_2_title" class="text-lg font-semibold text-gray-900 dark:text-white flex items-center gap-2 group-hover:text-blue-600 transition-colors">
                                 <i class="fa-solid fa-briefcase text-gray-400 group-hover:text-blue-500 transition-colors text-sm"></i> El Pulga Digital Museum
                             </h3>
-                            <p class="text-gray-600 dark:text-gray-400 font-medium ml-6">Frontend Developer | Personal Project · 1 Week</p>
+                            <p data-translate="exp_2_sub" class="text-gray-600 dark:text-gray-400 font-medium ml-6">Frontend Developer | Personal Project · 1 Week</p>
                         </div>
                         <div class="text-left md:text-right ml-6 md:ml-0">
                         </div>
                     </div>
-                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                    <p data-translate="exp_2_desc" class="text-gray-600 dark:text-gray-300 mb-6">
                        Built an interactive digital museum using Next.js and TypeScript, featuring reusable UI components, sticky scrolling, parallax effects, and 3D animations with Framer Motion.
                     </p>
                     <div class="flex flex-wrap gap-2">
@@ -306,15 +309,15 @@
                 <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-sm border border-gray-100 dark:border-gray-700 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 group cursor-default">
                     <div class="flex flex-col md:flex-row justify-between md:items-start mb-4 gap-2 md:gap-0">
                         <div>
-                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white flex items-center gap-2 group-hover:text-blue-600 transition-colors">
+                            <h3 data-translate="exp_3_title" class="text-lg font-semibold text-gray-900 dark:text-white flex items-center gap-2 group-hover:text-blue-600 transition-colors">
                                 <i class="fa-solid fa-briefcase text-gray-400 group-hover:text-blue-500 transition-colors text-sm"></i> Cosmetics E-Commerce Website
                             </h3>
-                            <p class="text-gray-600 dark:text-gray-400 font-medium ml-6">Full Stack Developer | Team Project · 7 Members · 8 Weeks</p>
+                            <p data-translate="exp_3_sub" class="text-gray-600 dark:text-gray-400 font-medium ml-6">Full Stack Developer | Team Project · 7 Members · 8 Weeks</p>
                         </div>
                         <div class="text-left md:text-right ml-6 md:ml-0">
                         </div>
                     </div>
-                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                    <p data-translate="exp_3_desc" class="text-gray-600 dark:text-gray-300 mb-6">
                         Developed an e-commerce website using ASP.NET MVC and SQL Server, implementing user authentication, product search and price filtering, shopping cart, and order management. Built an admin dashboard with role-based access control and inventory management.
                     </p>
                     <div class="flex flex-wrap gap-2">
@@ -333,7 +336,7 @@
         <!-- Featured Projects Section -->
         <section id="projects" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4 hover:scale-105 transition-transform inline-block">FEATURED PROJECTS</h2>
+                <h2 data-translate="proj_title" class="text-3xl font-bold text-gray-900 dark:text-white mb-4 hover:scale-105 transition-transform inline-block">FEATURED PROJECTS</h2>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -343,8 +346,8 @@
                         <img src="../assets/goat.png" alt="EL PULGA: Digital Museum" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     </div>
                     <div class="p-6 flex-grow flex flex-col relative">
-                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3 group-hover:text-blue-600 transition-colors uppercase">EL PULGA: LEO MESSI DIGITAL MUSEUM</h3>
-                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-6 flex-grow">
+                        <h3 data-translate="proj_1_title" class="text-xl font-semibold text-gray-900 dark:text-white mb-3 group-hover:text-blue-600 transition-colors uppercase">EL PULGA: LEO MESSI DIGITAL MUSEUM</h3>
+                        <p data-translate="proj_1_desc" class="text-gray-600 dark:text-gray-400 text-sm mb-6 flex-grow">
                             An immersive web experience celebrating the GOAT, engineered with advanced sticky scrolling, parallax effects, and fluid animations.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-6">
@@ -354,8 +357,8 @@
                             <span class="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded text-xs font-medium">Framer Motion</span>
                         </div>
                         <div class="flex items-center gap-3">
-                            <a href="https://github.com/minhtri12-dev/goat-gallery" target="_blank" class="px-4 py-2 border border-gray-200 dark:border-gray-600 rounded-lg text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-700 transition-all hover:-translate-y-1 hover:shadow-md flex items-center gap-2"><i class="fa-brands fa-github"></i> Code</a>
-                            <a href="https://goat-gallery-mocha.vercel.app/" target="_blank" class="px-4 py-2 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-lg text-sm font-medium hover:bg-gray-800 dark:hover:bg-gray-100 transition-all hover:-translate-y-1 hover:shadow-md flex items-center gap-2"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+                            <a href="https://github.com/minhtri12-dev/goat-gallery" target="_blank" data-translate="proj_code" class="px-4 py-2 border border-gray-200 dark:border-gray-600 rounded-lg text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-700 transition-all hover:-translate-y-1 hover:shadow-md flex items-center gap-2"><i class="fa-brands fa-github"></i> Code</a>
+                            <a href="https://goat-gallery-mocha.vercel.app/" target="_blank" data-translate="proj_demo" class="px-4 py-2 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-lg text-sm font-medium hover:bg-gray-800 dark:hover:bg-gray-100 transition-all hover:-translate-y-1 hover:shadow-md flex items-center gap-2"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
                         </div>
                     </div>
                 </div>
@@ -366,8 +369,8 @@
                         <img src="../assets/weather.png" alt="WEATHER APP" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     </div>
                     <div class="p-6 flex-grow flex flex-col relative">
-                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3 group-hover:text-emerald-600 transition-colors uppercase">SKYCAST: GLASSMORPHISM WEATHER APP</h3>
-                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-6 flex-grow">
+                        <h3 data-translate="proj_2_title" class="text-xl font-semibold text-gray-900 dark:text-white mb-3 group-hover:text-emerald-600 transition-colors uppercase">SKYCAST: GLASSMORPHISM WEATHER APP</h3>
+                        <p data-translate="proj_2_desc" class="text-gray-600 dark:text-gray-400 text-sm mb-6 flex-grow">
                             Real-time weather forecast dashboard featuring dynamic API integration, location-based search, and a sleek glassmorphism UI.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-6">
@@ -377,8 +380,8 @@
                             <span class="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded text-xs font-medium">OpenWeather API</span>
                         </div>
                         <div class="flex items-center gap-3">
-                            <a href="https://github.com/minhtri12-dev/Weather-App" target="_blank" class="px-4 py-2 border border-gray-200 dark:border-gray-600 rounded-lg text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-700 transition-all hover:-translate-y-1 hover:shadow-md flex items-center gap-2"><i class="fa-brands fa-github"></i> Code</a>
-                            <a href="https://minhtri12-dev.github.io/Weather-App/" target="_blank" class="px-4 py-2 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-lg text-sm font-medium hover:bg-gray-800 dark:hover:bg-gray-100 transition-all hover:-translate-y-1 hover:shadow-md flex items-center gap-2"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+                            <a href="https://github.com/minhtri12-dev/Weather-App" target="_blank" data-translate="proj_code" class="px-4 py-2 border border-gray-200 dark:border-gray-600 rounded-lg text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-700 transition-all hover:-translate-y-1 hover:shadow-md flex items-center gap-2"><i class="fa-brands fa-github"></i> Code</a>
+                            <a href="https://minhtri12-dev.github.io/Weather-App/" target="_blank" data-translate="proj_demo" class="px-4 py-2 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-lg text-sm font-medium hover:bg-gray-800 dark:hover:bg-gray-100 transition-all hover:-translate-y-1 hover:shadow-md flex items-center gap-2"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
                         </div>
                     </div>
                 </div>
@@ -389,8 +392,8 @@
                         <img src="../assets/music.png" alt="MUSIC APP" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     </div>
                     <div class="p-6 flex-grow flex flex-col relative">
-                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3 group-hover:text-purple-600 transition-colors uppercase">CHILL & RELAX: MODERN WEB MUSIC PLAYER</h3>
-                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-6 flex-grow">
+                        <h3 data-translate="proj_3_title" class="text-xl font-semibold text-gray-900 dark:text-white mb-3 group-hover:text-purple-600 transition-colors uppercase">CHILL & RELAX: MODERN WEB MUSIC PLAYER</h3>
+                        <p data-translate="proj_3_desc" class="text-gray-600 dark:text-gray-400 text-sm mb-6 flex-grow">
                             A feature-rich audio player built with Vanilla JavaScript, featuring custom audio controls, playlist management, and responsive design.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-6">
@@ -399,8 +402,8 @@
                             <span class="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded text-xs font-medium">JavaScript</span>
                         </div>
                         <div class="flex items-center gap-3">
-                            <a href="https://github.com/minhtri12-dev/music-app" target="_blank" class="px-4 py-2 border border-gray-200 dark:border-gray-600 rounded-lg text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-700 transition-all hover:-translate-y-1 hover:shadow-md flex items-center gap-2"><i class="fa-brands fa-github"></i> Code</a>
-                            <a href="https://minhtri12-dev.github.io/music-app/" target="_blank" class="px-4 py-2 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-lg text-sm font-medium hover:bg-gray-800 dark:hover:bg-gray-100 transition-all hover:-translate-y-1 hover:shadow-md flex items-center gap-2"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+                            <a href="https://github.com/minhtri12-dev/music-app" target="_blank" data-translate="proj_code" class="px-4 py-2 border border-gray-200 dark:border-gray-600 rounded-lg text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-700 transition-all hover:-translate-y-1 hover:shadow-md flex items-center gap-2"><i class="fa-brands fa-github"></i> Code</a>
+                            <a href="https://minhtri12-dev.github.io/music-app/" target="_blank" data-translate="proj_demo" class="px-4 py-2 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-lg text-sm font-medium hover:bg-gray-800 dark:hover:bg-gray-100 transition-all hover:-translate-y-1 hover:shadow-md flex items-center gap-2"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
                         </div>
                     </div>
                 </div>
@@ -411,8 +414,8 @@
                         <img src="../assets/demo.png" alt="TRILOGY 2215" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     </div>
                     <div class="p-6 flex-grow flex flex-col relative">
-                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3 group-hover:text-red-600 transition-colors uppercase">TRILOGY 2215: DETECTIVE MYSTERY GAME</h3>
-                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-6 flex-grow">
+                        <h3 data-translate="proj_4_title" class="text-xl font-semibold text-gray-900 dark:text-white mb-3 group-hover:text-red-600 transition-colors uppercase">TRILOGY 2215: DETECTIVE MYSTERY GAME</h3>
+                        <p data-translate="proj_4_desc" class="text-gray-600 dark:text-gray-400 text-sm mb-6 flex-grow">
                             An immersive narrative-driven detective puzzle game featuring interactive choices, dynamic UI state management, and engaging investigation mechanics.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-6">
@@ -421,8 +424,8 @@
                             <span class="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded text-xs font-medium">TypeScript</span>
                         </div>
                         <div class="flex items-center gap-3">
-                            <a href="https://github.com/minhtri12-dev/trilogy-2215" target="_blank" class="px-4 py-2 border border-gray-200 dark:border-gray-600 rounded-lg text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-700 transition-all hover:-translate-y-1 hover:shadow-md flex items-center gap-2"><i class="fa-brands fa-github"></i> Code</a>
-                            <a href="https://trilogy-2215.vercel.app/" target="_blank" class="px-4 py-2 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-lg text-sm font-medium hover:bg-gray-800 dark:hover:bg-gray-100 transition-all hover:-translate-y-1 hover:shadow-md flex items-center gap-2"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+                            <a href="https://github.com/minhtri12-dev/trilogy-2215" target="_blank" data-translate="proj_code" class="px-4 py-2 border border-gray-200 dark:border-gray-600 rounded-lg text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-700 transition-all hover:-translate-y-1 hover:shadow-md flex items-center gap-2"><i class="fa-brands fa-github"></i> Code</a>
+                            <a href="https://trilogy-2215.vercel.app/" target="_blank" data-translate="proj_demo" class="px-4 py-2 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-lg text-sm font-medium hover:bg-gray-800 dark:hover:bg-gray-100 transition-all hover:-translate-y-1 hover:shadow-md flex items-center gap-2"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
                         </div>
                     </div>
                 </div>
@@ -433,8 +436,8 @@
                         <img src="../assets/journey.png" alt="LOCAL JOURNEY" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     </div>
                     <div class="p-6 flex-grow flex flex-col relative">
-                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3 group-hover:text-amber-600 transition-colors uppercase">LOCAL JOURNEY: VIETNAM TRAVEL EXPLORER</h3>
-                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-6 flex-grow">
+                        <h3 data-translate="proj_5_title" class="text-xl font-semibold text-gray-900 dark:text-white mb-3 group-hover:text-amber-600 transition-colors uppercase">LOCAL JOURNEY: VIETNAM TRAVEL EXPLORER</h3>
+                        <p data-translate="proj_5_desc" class="text-gray-600 dark:text-gray-400 text-sm mb-6 flex-grow">
                             A work-in-progress travel discovery web application showcasing destinations across Vietnam, focused on engaging user experience and interactive UI components.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-6">
@@ -443,20 +446,20 @@
                             <span class="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded text-xs font-medium">TypeScript</span>
                         </div>
                         <div class="flex items-center gap-3">
-                            <a href="https://github.com/minhtri12-dev/local-journey" target="_blank" class="px-4 py-2 border border-gray-200 dark:border-gray-600 rounded-lg text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-700 transition-all hover:-translate-y-1 hover:shadow-md flex items-center gap-2"><i class="fa-brands fa-github"></i> Code</a>
-                            <a href="https://local-journey.vercel.app/" target="_blank" class="px-4 py-2 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-lg text-sm font-medium hover:bg-gray-800 dark:hover:bg-gray-100 transition-all hover:-translate-y-1 hover:shadow-md flex items-center gap-2"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+                            <a href="https://github.com/minhtri12-dev/local-journey" target="_blank" data-translate="proj_code" class="px-4 py-2 border border-gray-200 dark:border-gray-600 rounded-lg text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-700 transition-all hover:-translate-y-1 hover:shadow-md flex items-center gap-2"><i class="fa-brands fa-github"></i> Code</a>
+                            <a href="https://local-journey.vercel.app/" target="_blank" data-translate="proj_demo" class="px-4 py-2 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-lg text-sm font-medium hover:bg-gray-800 dark:hover:bg-gray-100 transition-all hover:-translate-y-1 hover:shadow-md flex items-center gap-2"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project 5: ZEST-FIN-FINANCE -->
+                <!-- Project 6: ZEST-FIN-FINANCE -->
                 <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 overflow-hidden flex flex-col transition-all duration-300 hover:shadow-2xl hover:-translate-y-3 group">
                     <div class="h-48 w-full bg-gray-200 dark:bg-gray-700 relative overflow-hidden flex items-center justify-center">
                         <img src="../assets/finance.png" alt="ZEST-FIN-FINANCE" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     </div>
                     <div class="p-6 flex-grow flex flex-col relative">
-                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3 group-hover:text-amber-600 transition-colors uppercase">ZESTFIN FINANCE: SMART CASH FLOW & BUDGET</h3>
-                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-6 flex-grow">
+                        <h3 data-translate="proj_6_title" class="text-xl font-semibold text-gray-900 dark:text-white mb-3 group-hover:text-amber-600 transition-colors uppercase">ZESTFIN FINANCE: SMART CASH FLOW & BUDGET</h3>
+                        <p data-translate="proj_6_desc" class="text-gray-600 dark:text-gray-400 text-sm mb-6 flex-grow">
                             A feature-rich financial dashboard built with modern UI/UX principles, featuring voice/text AI input, real-time burn-rate analytics, split-bill utilities, and dynamic multi-period trend visualization.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-6">
@@ -466,8 +469,8 @@
                             <span class="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded text-xs font-medium">Lucide React</span>
                         </div>
                         <div class="flex items-center gap-3">
-                            <a href="https://github.com/minhtri12-dev/zest-finance-app" target="_blank" class="px-4 py-2 border border-gray-200 dark:border-gray-600 rounded-lg text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-700 transition-all hover:-translate-y-1 hover:shadow-md flex items-center gap-2"><i class="fa-brands fa-github"></i> Code</a>
-                            <a href="https://zest-finance-app.vercel.app/" target="_blank" class="px-4 py-2 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-lg text-sm font-medium hover:bg-gray-800 dark:hover:bg-gray-100 transition-all hover:-translate-y-1 hover:shadow-md flex items-center gap-2"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+                            <a href="https://github.com/minhtri12-dev/zest-finance-app" target="_blank" data-translate="proj_code" class="px-4 py-2 border border-gray-200 dark:border-gray-600 rounded-lg text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-700 transition-all hover:-translate-y-1 hover:shadow-md flex items-center gap-2"><i class="fa-brands fa-github"></i> Code</a>
+                            <a href="https://zest-finance-app.vercel.app/" target="_blank" data-translate="proj_demo" class="px-4 py-2 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-lg text-sm font-medium hover:bg-gray-800 dark:hover:bg-gray-100 transition-all hover:-translate-y-1 hover:shadow-md flex items-center gap-2"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
                         </div>
                     </div>
                 </div>
@@ -479,7 +482,7 @@
         <!-- Contact Section -->
         <section id="contact" class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 mb-10">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4 hover:scale-105 transition-transform inline-block">LET'S WORK TOGETHER</h2>
+                <h2 data-translate="contact_title" class="text-3xl font-bold text-gray-900 dark:text-white mb-4 hover:scale-105 transition-transform inline-block">LET'S WORK TOGETHER</h2>
             </div>
 
             <div class="flex flex-col md:flex-row gap-8">
@@ -488,7 +491,7 @@
                     <div class="bg-white dark:bg-gray-800 p-5 rounded-2xl border border-gray-100 dark:border-gray-700 shadow-sm flex items-center gap-4 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-gray-300 dark:hover:border-gray-500 cursor-pointer group">
                         <i class="fa-regular fa-envelope text-gray-400 text-xl w-6 group-hover:text-blue-500 transition-colors group-hover:scale-110"></i>
                         <div>
-                            <p class="text-sm font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 transition-colors">Email</p>
+                            <p data-translate="contact_email" class="text-sm font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 transition-colors">Email</p>
                             <p class="text-sm text-gray-500 dark:text-gray-400">to.minhtringuyen@gmail.com</p>
                         </div>
                     </div>
@@ -496,7 +499,7 @@
                     <div class="bg-white dark:bg-gray-800 p-5 rounded-2xl border border-gray-100 dark:border-gray-700 shadow-sm flex items-center gap-4 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-gray-300 dark:hover:border-gray-500 cursor-pointer group">
                         <i class="fa-solid fa-phone text-gray-400 text-xl w-6 group-hover:text-green-500 transition-colors group-hover:scale-110"></i>
                         <div>
-                            <p class="text-sm font-semibold text-gray-900 dark:text-white group-hover:text-green-600 transition-colors">Phone</p>
+                            <p data-translate="contact_phone" class="text-sm font-semibold text-gray-900 dark:text-white group-hover:text-green-600 transition-colors">Phone</p>
                             <p class="text-sm text-gray-500 dark:text-gray-400">+84 383 223 862</p>
                         </div>
                     </div>
@@ -504,7 +507,7 @@
                     <div class="bg-white dark:bg-gray-800 p-5 rounded-2xl border border-gray-100 dark:border-gray-700 shadow-sm flex items-center gap-4 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-gray-300 dark:hover:border-gray-500 cursor-pointer group">
                         <i class="fa-solid fa-location-dot text-gray-400 text-xl w-6 group-hover:text-red-500 transition-colors group-hover:scale-110"></i>
                         <div>
-                            <p class="text-sm font-semibold text-gray-900 dark:text-white group-hover:text-red-600 transition-colors">Location</p>
+                            <p data-translate="contact_loc" class="text-sm font-semibold text-gray-900 dark:text-white group-hover:text-red-600 transition-colors">Location</p>
                             <p class="text-sm text-gray-500 dark:text-gray-400">Ho Chi Minh City</p>
                         </div>
                     </div>
@@ -513,15 +516,15 @@
                 <!-- Right: Form -->
                 <div class="w-full md:w-2/3">
                     <div class="bg-white dark:bg-gray-800 p-6 md:p-8 rounded-2xl border border-gray-100 dark:border-gray-700 shadow-sm transition-all duration-300 hover:shadow-xl">
-                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-6">Send a Message</h3>
+                        <h3 data-translate="contact_form_title" class="text-lg font-semibold text-gray-900 dark:text-white mb-6">Send a Message</h3>
                         <form class="flex flex-col gap-4">
                             <div class="flex flex-col md:flex-row gap-4">
-                                <input type="text" placeholder="Your Name" class="w-full bg-gray-50 dark:bg-gray-900 border border-transparent rounded-lg p-3 text-sm text-gray-900 dark:text-white focus:border-gray-300 dark:focus:border-gray-600 focus:ring-2 focus:ring-gray-200 dark:focus:ring-gray-700 outline-none transition-all hover:border-gray-200 dark:hover:border-gray-700">
-                                <input type="email" placeholder="Your Email" class="w-full bg-gray-50 dark:bg-gray-900 border border-transparent rounded-lg p-3 text-sm text-gray-900 dark:text-white focus:border-gray-300 dark:focus:border-gray-600 focus:ring-2 focus:ring-gray-200 dark:focus:ring-gray-700 outline-none transition-all hover:border-gray-200 dark:hover:border-gray-700">
+                                <input type="text" data-placeholder="placeholder_name" placeholder="Your Name" class="w-full bg-gray-50 dark:bg-gray-900 border border-transparent rounded-lg p-3 text-sm text-gray-900 dark:text-white focus:border-gray-300 dark:focus:border-gray-600 focus:ring-2 focus:ring-gray-200 dark:focus:ring-gray-700 outline-none transition-all hover:border-gray-200 dark:hover:border-gray-700">
+                                <input type="email" data-placeholder="placeholder_email" placeholder="Your Email" class="w-full bg-gray-50 dark:bg-gray-900 border border-transparent rounded-lg p-3 text-sm text-gray-900 dark:text-white focus:border-gray-300 dark:focus:border-gray-600 focus:ring-2 focus:ring-gray-200 dark:focus:ring-gray-700 outline-none transition-all hover:border-gray-200 dark:hover:border-gray-700">
                             </div>
-                            <input type="text" placeholder="Subject" class="w-full bg-gray-50 dark:bg-gray-900 border border-transparent rounded-lg p-3 text-sm text-gray-900 dark:text-white focus:border-gray-300 dark:focus:border-gray-600 focus:ring-2 focus:ring-gray-200 dark:focus:ring-gray-700 outline-none transition-all hover:border-gray-200 dark:hover:border-gray-700">
-                            <textarea placeholder="Your Message" rows="4" class="w-full bg-gray-50 dark:bg-gray-900 border border-transparent rounded-lg p-3 text-sm text-gray-900 dark:text-white focus:border-gray-300 dark:focus:border-gray-600 focus:ring-2 focus:ring-gray-200 dark:focus:ring-gray-700 outline-none transition-all hover:border-gray-200 dark:hover:border-gray-700 resize-none"></textarea>
-                            <button type="button" class="w-full bg-gray-900 dark:bg-white text-white dark:text-gray-900 font-medium rounded-lg py-3 mt-2 hover:bg-gray-800 dark:hover:bg-gray-200 transition-all hover:-translate-y-1 hover:shadow-lg flex justify-center items-center gap-2 group">
+                            <input type="text" data-placeholder="placeholder_sub" placeholder="Subject" class="w-full bg-gray-50 dark:bg-gray-900 border border-transparent rounded-lg p-3 text-sm text-gray-900 dark:text-white focus:border-gray-300 dark:focus:border-gray-600 focus:ring-2 focus:ring-gray-200 dark:focus:ring-gray-700 outline-none transition-all hover:border-gray-200 dark:hover:border-gray-700">
+                            <textarea data-placeholder="placeholder_msg" placeholder="Your Message" rows="4" class="w-full bg-gray-50 dark:bg-gray-900 border border-transparent rounded-lg p-3 text-sm text-gray-900 dark:text-white focus:border-gray-300 dark:focus:border-gray-600 focus:ring-2 focus:ring-gray-200 dark:focus:ring-gray-700 outline-none transition-all hover:border-gray-200 dark:hover:border-gray-700 resize-none"></textarea>
+                            <button type="button" data-translate="btn_send" class="w-full bg-gray-900 dark:bg-white text-white dark:text-gray-900 font-medium rounded-lg py-3 mt-2 hover:bg-gray-800 dark:hover:bg-gray-200 transition-all hover:-translate-y-1 hover:shadow-lg flex justify-center items-center gap-2 group">
                                 <i class="fa-regular fa-paper-plane group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i> Send Message
                             </button>
                         </form>
@@ -533,5 +536,187 @@
 
     <!-- Custom Script -->
     <script src="script.js"></script>
+
+    <!-- Language Toggle Script -->
+    <script>
+        const translations = {
+            en: {
+                nav_home: "Home",
+                nav_skills: "Skills",
+                nav_experience: "Experience",
+                nav_projects: "Projects",
+                nav_contact: "Contact",
+                hero_hello: "Hello, I'm <br/>\n<span class=\"text-gray-900 dark:text-white\">Nguyen Minh Tri</span>",
+                hero_role: "Software Engineer | Fullstack Developer",
+                hero_desc: "Passionate about building modern web applications. Familiar with React.js, Next.js, C#, ASP.NET MVC, Node.js, TypeScript, and SQL Server, with a strong foundation in RESTful APIs, Authentication and Authorization.",
+                hero_download: '<i class="fa-solid fa-download"></i> Download Resume',
+                hero_view: "View My Work",
+                hero_stat_1: "Projects Built",
+                hero_stat_2: "Core Technologies",
+                hero_stat_3: "Development Focus",
+                hero_ready: "Ready for Work",
+                skills_title: "SKILLS",
+                skills_tech: "Technical Skills",
+                skills_prog: '<i class="fa-regular fa-file-code text-gray-500 dark:text-gray-400"></i> Programming Languages',
+                skills_front: '<i class="fa-solid fa-server text-gray-500 dark:text-gray-400"></i> Frontend Development',
+                skills_back: '<i class="fa-solid fa-database text-gray-500 dark:text-gray-400"></i> Backend & APIs',
+                skills_db: '<i class="fa-solid fa-database text-gray-500 dark:text-gray-400"></i> Database & Developer Tools',
+                skills_soft_title: "Soft Skills",
+                skills_soft_1: '<i class="fa-regular fa-comments text-gray-500 dark:text-gray-400"></i> Communication & Collaboration',
+                skills_soft_1_1: "Teamwork",
+                skills_soft_1_2: "Knowledge Sharing",
+                skills_soft_1_3: "Active Listening",
+                skills_soft_2: '<i class="fa-regular fa-handshake text-gray-500 dark:text-gray-400"></i> Teamwork & Adaptability',
+                skills_soft_2_1: "Team Collaboration",
+                skills_soft_2_2: "Adaptability",
+                skills_soft_2_3: "Responsibility",
+                skills_soft_3: '<i class="fa-regular fa-lightbulb text-gray-500 dark:text-gray-400"></i> Problem Solving & Growth',
+                skills_soft_3_1: "Logical Thinking",
+                skills_soft_3_2: "Time Management",
+                skills_soft_3_3: "Self-Learning",
+                skills_lang: '<i class="fa-regular fa-lightbulb text-gray-500 dark:text-gray-400"></i> Languages',
+                skills_lang_1: "Vietnamese - Native",
+                skills_lang_2: "English - TOEIC 550",
+                exp_title: "PROJECTS EXPERIENCE",
+                exp_1_title: '<i class="fa-solid fa-briefcase text-gray-400 group-hover:text-blue-500 transition-colors text-sm"></i> Shoes E-Commerce Website',
+                exp_1_sub: "Full Stack Developer | Team Project · 6 Members · 8 Weeks",
+                exp_1_desc: "Developed a full-stack e-commerce website with user authentication, role-based access control, product management, search and filtering, shopping cart, and order processing. Designed a relational database using SQL Server and collaborated with team members through Git/GitHub.",
+                exp_2_title: '<i class="fa-solid fa-briefcase text-gray-400 group-hover:text-blue-500 transition-colors text-sm"></i> El Pulga Digital Museum',
+                exp_2_sub: "Frontend Developer | Personal Project · 1 Week",
+                exp_2_desc: "Built an interactive digital museum using Next.js and TypeScript, featuring reusable UI components, sticky scrolling, parallax effects, and 3D animations with Framer Motion.",
+                exp_3_title: '<i class="fa-solid fa-briefcase text-gray-400 group-hover:text-blue-500 transition-colors text-sm"></i> Cosmetics E-Commerce Website',
+                exp_3_sub: "Full Stack Developer | Team Project · 7 Members · 8 Weeks",
+                exp_3_desc: "Developed an e-commerce website using ASP.NET MVC and SQL Server, implementing user authentication, product search and price filtering, shopping cart, and order management. Built an admin dashboard with role-based access control and inventory management.",
+                proj_title: "FEATURED PROJECTS",
+                proj_1_title: "EL PULGA: LEO MESSI DIGITAL MUSEUM",
+                proj_1_desc: "An immersive web experience celebrating the GOAT, engineered with advanced sticky scrolling, parallax effects, and fluid animations.",
+                proj_2_title: "SKYCAST: GLASSMORPHISM WEATHER APP",
+                proj_2_desc: "Real-time weather forecast dashboard featuring dynamic API integration, location-based search, and a sleek glassmorphism UI.",
+                proj_3_title: "CHILL & RELAX: MODERN WEB MUSIC PLAYER",
+                proj_3_desc: "A feature-rich audio player built with Vanilla JavaScript, featuring custom audio controls, playlist management, and responsive design.",
+                proj_4_title: "TRILOGY 2215: DETECTIVE MYSTERY GAME",
+                proj_4_desc: "An immersive narrative-driven detective puzzle game featuring interactive choices, dynamic UI state management, and engaging investigation mechanics.",
+                proj_5_title: "LOCAL JOURNEY: VIETNAM TRAVEL EXPLORER",
+                proj_5_desc: "A work-in-progress travel discovery web application showcasing destinations across Vietnam, focused on engaging user experience and interactive UI components.",
+                proj_6_title: "ZESTFIN FINANCE: SMART CASH FLOW & BUDGET",
+                proj_6_desc: "A feature-rich financial dashboard built with modern UI/UX principles, featuring voice/text AI input, real-time burn-rate analytics, split-bill utilities, and dynamic multi-period trend visualization.",
+                proj_code: '<i class="fa-brands fa-github"></i> Code',
+                proj_demo: '<i class="fa-solid fa-arrow-up-right-from-square"></i> Demo',
+                contact_title: "LET'S WORK TOGETHER",
+                contact_email: "Email",
+                contact_phone: "Phone",
+                contact_loc: "Location",
+                contact_form_title: "Send a Message",
+                placeholder_name: "Your Name",
+                placeholder_email: "Your Email",
+                placeholder_sub: "Subject",
+                placeholder_msg: "Your Message",
+                btn_send: '<i class="fa-regular fa-paper-plane group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i> Send Message'
+            },
+            vi: {
+                nav_home: "Trang chủ",
+                nav_skills: "Kỹ năng",
+                nav_experience: "Kinh nghiệm",
+                nav_projects: "Dự án",
+                nav_contact: "Liên hệ",
+                hero_hello: "Xin chào, tôi là <br/>\n<span class=\"text-gray-900 dark:text-white\">Nguyễn Minh Trí</span>",
+                hero_role: "Kỹ sư phần mềm | Lập trình viên Fullstack",
+                hero_desc: "Đam mê xây dựng các ứng dụng web hiện đại. Có kinh nghiệm với React.js, Next.js, C#, ASP.NET MVC, Node.js, TypeScript và SQL Server, cùng nền tảng vững chắc về RESTful API, xác thực và phân quyền (Auth).",
+                hero_download: '<i class="fa-solid fa-download"></i> Tải CV',
+                hero_view: "Xem Dự Án",
+                hero_stat_1: "Dự án hoàn thành",
+                hero_stat_2: "Công nghệ cốt lõi",
+                hero_stat_3: "Hướng phát triển",
+                hero_ready: "Sẵn sàng làm việc",
+                skills_title: "KỸ NĂNG",
+                skills_tech: "Kỹ năng kỹ thuật",
+                skills_prog: '<i class="fa-regular fa-file-code text-gray-500 dark:text-gray-400"></i> Ngôn ngữ Lập trình',
+                skills_front: '<i class="fa-solid fa-server text-gray-500 dark:text-gray-400"></i> Lập trình Frontend',
+                skills_back: '<i class="fa-solid fa-database text-gray-500 dark:text-gray-400"></i> Backend & API',
+                skills_db: '<i class="fa-solid fa-database text-gray-500 dark:text-gray-400"></i> Cơ sở dữ liệu & Công cụ',
+                skills_soft_title: "Kỹ năng Mềm",
+                skills_soft_1: '<i class="fa-regular fa-comments text-gray-500 dark:text-gray-400"></i> Giao tiếp & Hợp tác',
+                skills_soft_1_1: "Làm việc nhóm",
+                skills_soft_1_2: "Chia sẻ kiến thức",
+                skills_soft_1_3: "Lắng nghe tích cực",
+                skills_soft_2: '<i class="fa-regular fa-handshake text-gray-500 dark:text-gray-400"></i> Trách nhiệm & Thích nghi',
+                skills_soft_2_1: "Phối hợp nhóm",
+                skills_soft_2_2: "Khả năng thích ứng",
+                skills_soft_2_3: "Tinh thần trách nhiệm",
+                skills_soft_3: '<i class="fa-regular fa-lightbulb text-gray-500 dark:text-gray-400"></i> Giải quyết vấn đề & Phát triển',
+                skills_soft_3_1: "Tư duy Logic",
+                skills_soft_3_2: "Quản lý Thời gian",
+                skills_soft_3_3: "Kỹ năng Tự học",
+                skills_lang: '<i class="fa-regular fa-lightbulb text-gray-500 dark:text-gray-400"></i> Ngoại ngữ',
+                skills_lang_1: "Tiếng Việt - Bản ngữ",
+                skills_lang_2: "Tiếng Anh - TOEIC 550",
+                exp_title: "KINH NGHIỆM DỰ ÁN",
+                exp_1_title: '<i class="fa-solid fa-briefcase text-gray-400 group-hover:text-blue-500 transition-colors text-sm"></i> Website Bán Giày E-Commerce',
+                exp_1_sub: "Lập trình viên Full Stack | Dự án nhóm · 6 Thành viên · 8 Tuần",
+                exp_1_desc: "Phát triển website thương mại điện tử full-stack với các tính năng xác thực người dùng, phân quyền, quản lý sản phẩm, tìm kiếm và lọc, giỏ hàng và xử lý đơn đặt hàng. Thiết kế cơ sở dữ liệu quan hệ bằng SQL Server và cộng tác với nhóm thông qua Git/GitHub.",
+                exp_2_title: '<i class="fa-solid fa-briefcase text-gray-400 group-hover:text-blue-500 transition-colors text-sm"></i> Bảo tàng số El Pulga',
+                exp_2_sub: "Lập trình viên Frontend | Dự án cá nhân · 1 Tuần",
+                exp_2_desc: "Xây dựng bảo tàng số tương tác sử dụng Next.js và TypeScript, bao gồm các thành phần UI có thể tái sử dụng, hiệu ứng cuộn dính (sticky scrolling), parallax và hoạt ảnh 3D với Framer Motion.",
+                exp_3_title: '<i class="fa-solid fa-briefcase text-gray-400 group-hover:text-blue-500 transition-colors text-sm"></i> Website Bán Mỹ Phẩm',
+                exp_3_sub: "Lập trình viên Full Stack | Dự án nhóm · 7 Thành viên · 8 Tuần",
+                exp_3_desc: "Phát triển website bán hàng bằng ASP.NET MVC và SQL Server, thực hiện xác thực người dùng, tìm kiếm và lọc giá sản phẩm, giỏ hàng và quản lý đơn hàng. Xây dựng trang quản trị với chức năng phân quyền và quản lý kho.",
+                proj_title: "DỰ ÁN TIÊU BIỂU",
+                proj_1_title: "EL PULGA: BẢO TÀNG SỐ LEO MESSI",
+                proj_1_desc: "Trải nghiệm web sống động tôn vinh GOAT, được xây dựng với hiệu ứng cuộn dính nâng cao, hiệu ứng parallax và hoạt ảnh mượt mà.",
+                proj_2_title: "SKYCAST: ỨNG DỤNG THỜI TIẾT GLASSMORPHISM",
+                proj_2_desc: "Bảng điều khiển dự báo thời tiết theo thời gian thực tích hợp API động, tìm kiếm theo vị trí và giao diện glassmorphism hiện đại.",
+                proj_3_title: "CHILL & RELAX: TRÌNH PHÁT NHẠC WEB",
+                proj_3_desc: "Trình phát âm thanh nhiều tính năng được xây dựng bằng Vanilla JavaScript, có các điều khiển âm thanh tùy chỉnh, quản lý danh sách phát và thiết kế responsive.",
+                proj_4_title: "TRILOGY 2215: TRÒ CHƠI PHÁ ÁN BÍ ẨN",
+                proj_4_desc: "Trò chơi giải đố trinh thám cốt truyện lôi cuốn, có các lựa chọn tương tác, quản lý trạng thái UI động và cơ chế điều tra hấp dẫn.",
+                proj_5_title: "LOCAL JOURNEY: KHÁM PHÁ DU LỊCH VIỆT NAM",
+                proj_5_desc: "Ứng dụng web khám phá du lịch (đang phát triển), giới thiệu các điểm đến khắp Việt Nam, tập trung vào trải nghiệm người dùng và UI tương tác.",
+                proj_6_title: "ZESTFIN FINANCE: QUẢN LÝ TÀI CHÍNH THÔNG MINH",
+                proj_6_desc: "Bảng điều khiển tài chính (UI/UX) hiện đại, hỗ trợ nhập liệu AI bằng giọng nói/văn bản, phân tích tỷ lệ tiêu hao theo thời gian thực, tiện ích chia hóa đơn và trực quan hóa xu hướng.",
+                proj_code: '<i class="fa-brands fa-github"></i> Mã nguồn',
+                proj_demo: '<i class="fa-solid fa-arrow-up-right-from-square"></i> Xem thử',
+                contact_title: "HÃY HỢP TÁC CÙNG NHAU",
+                contact_email: "Email",
+                contact_phone: "Điện thoại",
+                contact_loc: "Vị trí",
+                contact_form_title: "Gửi tin nhắn",
+                placeholder_name: "Tên của bạn",
+                placeholder_email: "Email của bạn",
+                placeholder_sub: "Chủ đề",
+                placeholder_msg: "Tin nhắn của bạn",
+                btn_send: '<i class="fa-regular fa-paper-plane group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i> Gửi tin nhắn'
+            }
+        };
+
+        let currentLang = 'en';
+        const langToggleBtn = document.getElementById('lang-toggle');
+        const langText = document.getElementById('lang-text');
+
+        function updateLanguage(lang) {
+            currentLang = lang;
+            langText.textContent = lang === 'en' ? 'EN' : 'VI';
+            
+            // Update Text / HTML
+            document.querySelectorAll('[data-translate]').forEach(el => {
+                const key = el.getAttribute('data-translate');
+                if (translations[lang][key]) {
+                    el.innerHTML = translations[lang][key];
+                }
+            });
+
+            // Update Placeholders for form inputs
+            document.querySelectorAll('[data-placeholder]').forEach(el => {
+                const key = el.getAttribute('data-placeholder');
+                if (translations[lang][key]) {
+                    el.placeholder = translations[lang][key];
+                }
+            });
+        }
+
+        langToggleBtn.addEventListener('click', () => {
+            const newLang = currentLang === 'en' ? 'vi' : 'en';
+            updateLanguage(newLang);
+        });
+    </script>
 </body>
 </html>
